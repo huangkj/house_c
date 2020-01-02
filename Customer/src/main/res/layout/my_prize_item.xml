@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="18dp">
+
+
+    <ImageView
+        android:id="@+id/ivPrize"
+        android:layout_width="125dp"
+        android:layout_height="74dp"
+        android:background="@color/_e7e7e7"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/tvTitlePrize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@+id/ivPrize"
+        android:text="京东卡100元"
+        android:textColor="#ff535353"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/tvDatePrize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvTitlePrize"
+        android:layout_below="@+id/tvTitlePrize"
+        android:layout_marginTop="15dp"
+        android:text="中奖时间：2016年09月11日"
+        android:textColor="#ffa5a5a5"
+        android:textSize="12sp" />
+
+
+    <ImageView
+        android:layout_width="8dp"
+        android:layout_height="14dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/pub_ic_arrow_right" />
+</RelativeLayout>

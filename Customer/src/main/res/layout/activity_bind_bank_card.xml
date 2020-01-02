@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请添加"
+            android:textColor="#353535"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvUserNameTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#353535"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="的银行卡"
+            android:textColor="#353535"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <include layout="@layout/include_line_h" />
+
+    <LinearLayout
+        android:id="@+id/llImagebankCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingBottom="14dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="10dp"
+            android:text="银行卡正面"
+            android:textColor="@color/_535353"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/ivbankCardFront"
+            android:layout_width="138dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="19dp"
+            android:background="@mipmap/iv_add_image"
+            android:scaleType="centerCrop" />
+
+        <include layout="@layout/include_line_hor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:text="银行卡反面"
+            android:textColor="@color/_535353"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvTipBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:drawableRight="@mipmap/icon_tip_orange"
+            android:drawablePadding="2dp"
+            android:text="为保证佣金正常提现，银行卡反面需有本人签名"
+            android:textColor="#Ff8C00"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/ivbankCardBack"
+            android:layout_width="138dp"
+            android:layout_height="100dp"
+            android:background="@mipmap/iv_add_image"
+            android:scaleType="centerCrop" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="19dp"
+        android:paddingRight="19dp">
+
+
+        <CheckBox
+            android:id="@+id/cbAgreebankCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_id_crad"
+            android:drawablePadding="7dp"
+            android:text="同意"
+            android:textColor="#9a9a9a" />
+
+        <TextView
+            android:id="@+id/tvUserBookbankCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/cbAgreebankCard"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/cbAgreebankCard"
+            android:text="《好生活用户协议》"
+            android:textColor="#FF6800"
+            android:textSize="15sp" />
+
+
+        <com.easylife.house.customer.view.ButtonTouch
+            android:id="@+id/btnNextbankCard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pub_title_bar_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/shape_bg_btn_gradient"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

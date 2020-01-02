@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pub_title_bar_height"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg_main_gray">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@mipmap/back_black" />
+
+        <ImageView
+            android:id="@+id/btnRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_15"
+            android:padding="@dimen/pub_padding_btn"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btnRightText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:padding="@dimen/pub_padding_btn"
+            android:textColor="@color/text_normal"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:maxWidth="200dp"
+            android:maxLines="1"
+            android:textColor="@color/text_normal"
+            android:textSize="@dimen/text_size_title" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_no_net"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_no_net"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/net_error" />
+
+        <TextView
+            android:id="@+id/tv_no_net"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_no_net"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="出来混 网络迟早有不好的时候
+            点击重试？"
+            android:textColor="@color/_138138138"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_no_net_try"
+            android:layout_width="108dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/tv_no_net"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/net_error_btn_bg"
+            android:text="点击重试" />
+
+    </RelativeLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

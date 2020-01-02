@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.pub.loginquick.QuickLoginActivity">
+
+    <LinearLayout
+        android:id="@+id/llTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="42dp"
+            android:text="手机快捷登录"
+            android:textColor="#ff444345"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="6dp"
+            android:text="未注册过的手机号将自动创建账号"
+            android:textColor="#ff9a9a9a"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLogin"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="20dp">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tlPhone"
+                android:layout_toLeftOf="@+id/btnGetVerifyCode"
+                android:layout_width="match_parent"
+                app:hintTextAppearance="@style/loginTextTip"
+                android:layout_marginRight="18dp"
+                android:layout_height="wrap_content">
+
+                <com.easylife.house.customer.view.EditTextClearAble
+                    android:id="@+id/edPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="请输入手机号"
+                    android:drawableRight="@mipmap/ic_clear"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="#ff444345"
+                    android:textColorHint="#C4C4C4"
+                    android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/btnGetVerifyCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tlPhone"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="18dp"
+                android:enabled="false"
+                android:padding="10dp"
+                android:text="获取验证码"
+                android:textColor="@color/text_color_verifycode"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="#E9E9E9" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            app:hintTextAppearance="@style/loginTextTip"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="30dp">
+
+            <com.easylife.house.customer.view.EditTextClearAble
+                android:id="@+id/edVerifyCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:drawableRight="@mipmap/ic_clear"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="#ff444345"
+                android:textColorHint="#C4C4C4"
+                android:textSize="15sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="#E9E9E9" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cbAgreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/selector_cb_check"
+                android:text=" 我已阅读并同意"
+                android:checked="true"
+                android:textColor="#C4C4C4"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvAgreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/selector_cb_check"
+                android:text=" 《用户服务协议》"
+                android:textColor="#C4C4C4"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <com.easylife.house.customer.view.ButtonTouch
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pub_title_bar_height"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/login_selector"
+            android:textStyle="bold"
+            android:enabled="false"
+            android:text="同意协议并登录"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvPassLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="18dp"
+            android:text="账号密码登录"
+            android:textColor="#ff9a9a9a"
+            android:textSize="13sp" />
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="其他方式登录"
+            android:textColor="#ff9a9a9a"
+            android:textSize="12sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.easylife.house.customer.view.ImageViewTouch
+                android:id="@+id/imgQQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@mipmap/icon_qq" />
+
+            <com.easylife.house.customer.view.ImageViewTouch
+                android:id="@+id/imgWeChat"
+                android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@mipmap/icon_wechat" />
+
+            <com.easylife.house.customer.view.ImageViewTouch
+                android:id="@+id/imgMicroblog"
+                android:layout_width="@dimen/width_share_icon"
+                android:layout_height="@dimen/width_share_icon"
+                android:layout_margin="10dp"
+                android:src="@mipmap/microblog"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

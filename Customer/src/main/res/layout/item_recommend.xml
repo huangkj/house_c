@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/GrayLighter"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_bg_white_6"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp">
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@id/tvStatus"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="#535353"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_bg_recommend_past"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="已过期"
+                android:textColor="@color/recommend_past_red"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/include_line_dash_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvRecordType"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="报备"
+                android:textColor="@color/recommend_record_type"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvDevName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@id/tvRecordType"
+                android:drawableLeft="@mipmap/icon_dev"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="#535353"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxEms="6"
+                android:maxLines="1"
+                android:text="推荐时间"
+                android:textColor="@color/text_hint"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvCall"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@mipmap/icon_call_orange"
+                android:drawablePadding="2dp"
+                android:gravity="center"
+                android:text="项目助理"
+                android:textColor="@color/text_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@id/tvCall"
+                android:layout_toRightOf="@id/tv1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="#ff535353"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

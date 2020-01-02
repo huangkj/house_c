@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerAddress"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bg_main_gray" />
+
+    <com.easylife.house.customer.view.ButtonTouch
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/gradient_end"
+        android:text="新增收货地址"
+        android:textColor="@color/white" />
+</LinearLayout>

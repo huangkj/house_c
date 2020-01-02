@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.easylife.house.customer">
+
+
+    <permission
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 友盟权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYFSTEMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 地图SDK（包含其搜索功能）需要的基础权限 -->
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 个推 -->
+    <!-- 支持iBeancon 需要蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- 支持个推3.0 电子围栏功能 -->
+
+
+    <!-- 支持iBeancon 需要蓝牙权限 -->
+    <!-- 支持个推3.0 电子围栏功能 -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="${APP_NAME_STRING}"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:label">
+        <activity android:name=".ui.pub.AdActivity"></activity>
+        <activity
+            android:name=".ui.houses.findhouse.CompareHouseActivity"
+            android:label="好房对比" />
+        <activity
+            android:name=".ui.houses.findhouse.FiltrateHouseActivity"
+            android:label="我要找房" />
+        <activity
+            android:name=".ui.houses.findhouse.FindHouseActivity"
+            android:label="我要找房" />
+        <activity android:name=".ui.pub.registeraccount.RegisterAccountActivity" />
+        <activity android:name=".ui.pub.loginaccount.AccountLoginActivity" />
+        <activity
+            android:name=".ui.mine.card.SelectSubBankActivity"
+            android:label="选择支行" />
+        <activity
+            android:name=".ui.mine.card.SelectSubBankSearchActivity"
+            android:label="选择支行" /> <!-- 2661b1916952a9df6f70ffd8e8494b7e 正式环境 -->
+        <!-- 485913b241166166adb16763e8d0ea72 测试环境 -->
+        <!-- 高德 -->
+
+        <!-- 友盟注册 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="58aed3037f2c74402000045b" />
+
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- 正式QQ tencent1106225386 -->
+                <data android:scheme="tencent1106225386" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.pub.LaunchActivity"
+            android:theme="@style/launch">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- 设置环信应用的appkey -->
+        <!-- 开发   后台配置环信的环境时，测试与预生产都是配的测试环境，所以除去正式环境，测试和预生产环境下都用测试环信配置即可 -->
+        <!--
+<meta-data
+                   android:name="EASEMOB_APPKEY"
+                   android:value="1138170223178014#easylife" />
+        -->
+        <!-- 灰度 -->
+        <!--  <meta-data
+                      android:name="EASEMOB_APPKEY"
+              android:value="1138170223178014#easylife-gray" />-->
+        <!-- 测试 -->
+        <!--  <meta-data
+                android:name="EASEMOB_APPKEY"
+               android:value="1138170223178014#life-ready" />-->
+        <!-- 正式 -->
+        <!--  <meta-data
+                android:name="EASEMOB_APPKEY"
+              android:value="1138170223178014#life" /> -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="${EASEMOB_APPKEY}" />
+        <meta-data
+            android:name="UMENG_CHANNEL_VALUE"
+            android:value="${UMENG_CHANNEL_VALUE}" /> <!-- 通联，选择图片 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="${AMAP_KEY}" /> <!-- 定位需要的服务 使用2.0的定位需要加上这个 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public" />
+        </provider>
+
+        <activity android:name=".ui.pub.GuideActivity" />
+        <activity android:name=".ui.pub.PhotoViewActivity" />
+        <activity android:name=".ui.pub.SavePhotoPupuActivity" />
+        <activity
+            android:name=".ui.payment.PayTypeActivity"
+            android:label="支付方式" />
+        <activity
+            android:name=".ui.payment.ApplyRefundActivity"
+            android:label="申请退款" />
+        <activity
+            android:name=".ui.payment.refundinfoupdate.RefundInfoUpdateActivity"
+            android:label="上传退款材料" />
+        <activity
+            android:name=".ui.payment.RefundRateActivity"
+            android:label="退款进度" />
+        <activity
+            android:name=".ui.mine.order.PayDetailPurchaseActivity"
+            android:label="支付明细" />
+        <activity
+            android:name=".ui.mine.order.PayDetailRaiseActivity"
+            android:label="支付明细" />
+        <activity
+            android:name=".ui.mine.order.PayDetailMixtureActivity"
+            android:label="支付明细" />
+        <activity
+            android:name=".ui.pub.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- 下面所设置的质需要和html端对调 -->
+                <!-- 在data里设置了 scheme和host，则该Activity可以接收和处理类似于 "sharetest://data/XXX"的链接   easylifecustomer://main?tab=mine   我的 -->
+                <data
+                    android:host="main"
+                    android:scheme="easylifecustomer" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.pub.AgreeMentActivity"
+            android:label="用户服务协议" />
+        <activity android:name=".ui.pub.logincontent.LoginContentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="regist"
+                    android:scheme="easylifecustomer" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.pub.loginnormal.LoginNormalActivity" />
+        <activity android:name=".ui.pub.loginbyverifycode.LoginByVerifyCodeActivity" />
+        <activity
+            android:name=".ui.pub.forgetpassword.ForgetPassWordActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="忘记密码"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.pub.register.RegisterActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.pub.updatepassword.UpdatePassWordActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="修改密码"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.SettingsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="设置"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.userinfo.UserInfoActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="我的账号"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.minebuyhouse.MineBuyHouseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="我要买房"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.recommenapp.RecommenAppActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="推荐应用"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.pub.TakePhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PhotoDialog" />
+        <activity android:name=".view.photo.PhotoAlbumActivity" />
+        <activity android:name=".ui.pub.WebViewActivity" />
+        <activity android:name=".ui.pub.PubWebViewActivity" />
+        <activity android:name=".ui.pub.ShopRentDetailWebActivity" />
+        <activity android:name=".ui.pub.StoreWebActivity" />
+        <activity
+            android:name=".ui.mine.HouseToolActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="房产工具"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.MyCollectActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="我的收藏"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.houses.map.mapfindhouse.MapFindHouseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="地图找房"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.homesearch.housefilter.HouseFilterActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="筛选"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.houses.map.mapperipheral.MapPeripheralActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="周边配套"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.houses.map.maparound.MapAroundActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="周边配套"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.calculator.rate.RateActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.calculator.taxes.TaxesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="税费计算器"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.calculator.CalculatorActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="房贷计算器"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.message.messageheadlines.MessageHeadLinesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="头条资讯"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.message.MessageListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="跟进消息"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.message.messagehouses.MessageHousesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="楼盘订阅"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.pub.AboutUsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="关于好生活"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.pub.LiabilityActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="免责声明"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.payment.favorable.FavorablePayResultActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="支付成功"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.payment.favorable.FavorableBuyActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="购买优惠"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.payment.favorable.FavorableSelectActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="选择优惠"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.order.orderdetail.OrderDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="订单详情"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity
+            android:name=".WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="action_wx_pay_result" />
+            </intent-filter>
+        </activity>
+
+        <!-- 个推服务 -->
+        <service
+            android:name=".service.GeTuiPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+        <service android:name=".service.GeTuiIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE"            />
+
+        <receiver android:name=".service.PushNotificationReceiver" />
+        <receiver
+            android:name=".AppRegister"
+            android:permission="com.tencent.mm.plugin.permission.SEND">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- 友盟结束 -->
+        <!-- 家的大小 -->
+        <activity
+            android:name=".ui.homesearch.homearea.HomeAreaActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" /> <!-- 首页搜索买在哪里 -->
+        <activity
+            android:name=".ui.homesearch.wherebuy.WhereBuyActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" /> <!-- 首页搜索预算 -->
+        <activity
+            android:name=".ui.homesearch.buget.BugetActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" /> <!-- 首页搜索开盘时间 -->
+        <activity
+            android:name=".ui.homesearch.opentime.OpenTimeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" /> <!-- 楼盘详情 -->
+        <activity
+            android:name=".ui.houses.HousesAndTypeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" /> <!-- 楼盘详情简版 -->
+        <activity
+            android:name=".ui.houses.housetype.houseandtypesimple.HousesAndTypeSimpleActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" /> <!-- 户型详情简版 -->
+        <activity
+            android:name=".ui.houses.housetype.housesTypeDetailSimple.HousesTypeDetailSimpleActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" /> <!-- 楼盘大图浏览 -->
+        <activity
+            android:name=".ui.houses.housesdetail.pager.PagerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" /> <!-- 楼盘大图 图片全部显示 -->
+        <activity
+            android:name=".ui.houses.housesdetail.pager.allimages.PagerAllImageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" /> <!-- 视频播放 -->
+        <activity
+            android:name=".ui.houses.housesdetail.pager.VideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="landscape" /> <!-- 楼盘信息跟过的 -->
+        <activity
+            android:name=".ui.houses.housesdetail.housesmore.HousesMoreActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 楼盘评论列表页面 -->
+        <activity
+            android:name=".ui.houses.housesdetail.housescomment.HousesCommentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 评论列表图片查看 -->
+        <activity
+            android:name=".ui.houses.housesdetail.housescomment.CommentPagerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 最新动态 -->
+        <activity
+            android:name=".ui.houses.housesdetail.newdynamic.NewDynamicActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 楼盘评价 -->
+        <activity
+            android:name=".ui.houses.housesdetail.comment.CommentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerThemeFullScreen"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.houses.housesdetail.exportlist.ExportActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 专家评论列表 -->
+        <activity
+            android:name=".ui.houses.housesdetail.exportlist.exportComment.ExportCommentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 户型详情 -->
+        <activity
+            android:name=".ui.houses.housetype.housesTypeDetail.HousesTypeDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 楼盘详情大图浏览 -->
+        <activity
+            android:name=".ui.houses.housetype.housesTypeDetail.PagerDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 获取优惠 -->
+        <activity
+            android:name=".ui.houses.housesdetail.getdiscount.GetDiscountActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 预约看房 -->
+        <activity
+            android:name=".ui.houses.housesdetail.bookinghouse.BookingHouseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 搜索结果页面 -->
+        <activity
+            android:name=".ui.homesearch.search.SearchActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" /> <!-- 专家店铺 -->
+        <activity
+            android:name=".ui.houses.exportshop.shop.ExportShopActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" /> <!-- 专家店铺评论列表 -->
+        <activity
+            android:name=".ui.houses.exportshop.commentlist.ExportCommentListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" /> <!-- 成交房源列表 -->
+        <activity
+            android:name=".ui.houses.exportshop.completehouse.CompleteHousesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" /> <!-- 动态图片浏览 -->
+        <activity
+            android:name=".ui.houses.exportshop.hisdynamic.DynamicPagerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" /> <!-- TA的动态 -->
+        <activity
+            android:name=".ui.houses.exportshop.hisdynamic.HisDynamicActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" /> <!-- TA的证书 -->
+        <activity
+            android:name=".ui.houses.exportshop.hisidc.HisIdcActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" /> <!-- 所售楼盘 -->
+        <activity
+            android:name=".ui.houses.exportshop.salehouses.SaleHousesActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" /> <!-- 楼栋信息 -->
+        <activity
+            android:name=".ui.houses.housesdetail.baninfo.BuildingActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" /> <!-- 马上订阅 -->
+        <activity
+            android:name=".ui.houses.housesdetail.nowsub.NowSubActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.houses.houseresource.HouseResourceActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="房源详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.payment.subscription.HouseSelectActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="在线选房"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.payment.subscription.HousePayActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="支付认购"
+            android:screenOrientation="portrait" />
+        <service
+            android:name=".service.UpdateService"
+            android:exported="false"
+            android:process=":updateservice" />
+
+        <activity
+            android:name=".ui.houses.housereslist.HouseResListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.qrhousesignup.HouseSignUpActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.houses.housepincontrol.HousePinControlActivity"
+            android:label="房源销控" />
+        <activity
+            android:name=".ui.mine.order.OrderListActivity"
+            android:label="我的订单"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.order.FavorableCertificateActivity"
+            android:label="优惠凭证"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.c2b.RecordAgainActivity"
+            android:label="再报备"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.c2b.MyRecommendActivity"
+            android:label="我的推荐"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.c2b.RecordDetailActivity"
+            android:label="客户详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.c2b.mycommission.MyCommissionActivity"
+            android:label="我的佣金"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.homesearch.allhouse.AllHouseActivity"
+            android:label="全部楼盘"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+        <activity
+            android:name=".ui.homesearch.recenthouse.RecentHouseActivity"
+            android:label="近期开盘"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing" />
+        <activity
+            android:name=".ui.homesearch.shoprent.ShopRentActivity"
+            android:label="商铺租赁"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustNothing" /> <!-- 环信配置 -->
+        <!-- 百度地图所需的service -->
+        <!-- <service -->
+        <!-- android:name="com.baidu.location.f" -->
+        <!-- android:enabled="true" -->
+        <!-- android:process=":remote" /> -->
+        <!-- 环信配置结束 -->
+        <!-- 支付宝 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" /> <!-- 支付宝 -->
+        <activity
+            android:name=".ui.homesearch.searchhouse.SearchHouseActivity"
+            android:label="搜索"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.homesearch.brandland.BrandLandActivity"
+            android:label="品牌地产"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" /> <!-- 选择城市 -->
+        <activity
+            android:name=".ui.homefragment.homeindexv3.ChooseCityActivity"
+            android:label="选择城市"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.message.topmessage.TopMessageActivity"
+            android:label="头条资讯"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.sign.SignActivity"
+            android:label="签到"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.prize.PrizeActivity"
+            android:label="我的奖品"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.prize.PrizeDetailActivity"
+            android:label="奖品详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.integral.IntegralActivity"
+            android:label="我的积分"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.invitefriend.InviteFriendActivity"
+            android:label="邀请好友"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.pub.InvitationCodeActivity" />
+        <activity
+            android:name=".ui.mine.AddressManagerActivity"
+            android:label="地址管理"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.pub.PubSelectItemPopActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.mine.MineInfoEditActivity"
+            android:label="我的用户名"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.AddressEditActivity"
+            android:label="新增收货地址"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.pub.PubSelectAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.pub.PubSelectAddress2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DialogStyleBottom"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.mine.card.IDCardIdentificationActivity"
+            android:label="身份认证"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.card.IDCardNextActivity"
+            android:label="身份认证"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.card.MyBankCardActivity"
+            android:label="我的银行卡"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.card.InputTraderPasswordActivity"
+            android:label="输入交易密码"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.card.BindBankCardActivity"
+            android:label="绑定银行卡"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.card.AddBankCardActivity"
+            android:label="添加银行卡"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.card.BankVerificationCodeActivity"
+            android:label="绑定银行卡"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.card.BankCardDetailActivity"
+            android:label="银行卡详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.accountsafe.AccountSafeActivity"
+            android:label="账号与安全"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.MyRecommendListActivity"
+            android:label="我的推荐"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.RecommendDetailActivity"
+            android:label="推荐详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.accountsafe.BindMobileActivity"
+            android:label="绑定手机号"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.accountsafe.SetTradePswVerificationCodeActivity"
+            android:label="设置交易密码"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.accountsafe.ConfirmTradePswActivity"
+            android:label="设置交易密码"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.accountsafe.TradeForgetPswActivity"
+            android:label="忘记密码"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.brokerage.MyBrokerageActivity"
+            android:label="我的佣金"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.brokerage.ApplyBrokerageActivity"
+            android:label="申请结佣"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.brokerage.SelectBrokerageOrderActivity"
+            android:label="选择结佣订单"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.brokerage.BrokerageRecordActivity"
+            android:label="结佣记录"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.brokerage.SelectBankActivity"
+            android:label="选择银行卡"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.AccountSettingsActivity"
+            android:label="账户设置"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.brokerage.BrokerageDetailActivity"
+            android:label="结佣详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.mine.accountsafe.SetTraderPasswordActivity"
+            android:label="设置交易密码"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.houses.housedetailv5.HouseDetailActivity" />
+        <activity android:name=".ui.fitment.FitmentActivity" />
+        <activity
+            android:name=".ui.fitment.DesignCaseListActivity"
+            android:label="设计案例" />
+        <activity
+            android:name=".ui.fitment.KnowledgeListActivity"
+            android:label="装修知识" />
+        <activity
+            android:name=".ui.fitment.MyFitmentPlanActivity"
+            android:label="装修方案" />
+        <activity android:name=".ui.fitment.CaseFilterActivity" />
+        <activity
+            android:name=".ui.houses.housedetailv5.HouseTypeActivity"
+            android:label="户型列表" />
+        <activity
+            android:name=".ui.mine.card.BankListActivity"
+            android:label="选择银行" />
+        <activity
+            android:name=".ui.mine.card.BankSearchListActivity"
+            android:label="选择银行" />
+        <activity
+            android:name=".ui.pub.PdfReviewActivity"
+            android:label="PDF预览" />
+        <activity
+            android:name=".ui.pub.loginquick.QuickLoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".view.pdfviewpager.library.service.CopyAssetService"
+            android:exported="false" />
+    </application>
+
+</manifest>

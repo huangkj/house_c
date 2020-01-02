@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/GrayLighter"
+        android:minWidth="200dp"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="温馨提示："
+            android:textColor="#4c4c4c"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="您有该楼盘的会员优惠订单未完成，需先购买该楼盘的会员优惠，方可查看和认购房源。"
+            android:textColor="#4c4c4c"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <com.easylife.house.customer.view.ButtonTouch
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="@drawable/shape_black_white_3"
+                android:text="放弃"
+                android:textColor="@color/text_normal"
+                android:textSize="14sp" />
+
+            <com.easylife.house.customer.view.ButtonTouch
+                android:id="@+id/btnOk"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/shape_blue_3"
+                android:text="查看订单"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

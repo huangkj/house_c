@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp">
+
+    <TextView
+        android:id="@+id/tvMessageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="23dp"
+        android:text="房地产融资境内发债略有回暖 开发贷仍受调控"
+        android:textColor="#ff444345"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:id="@+id/llImgsMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMessageTitle"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivImg1Message"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            app:riv_corner_radius="2dip"
+            app:riv_oval="false" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="1dp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivImg2Message"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            app:riv_corner_radius="2dip"
+            app:riv_oval="false" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="1dp" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivImg3Message"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            app:riv_corner_radius="2dip"
+            app:riv_oval="false" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDateMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llImgsMessage"
+        android:layout_marginTop="12dp"
+        android:text="2017-09-08"
+        android:textColor="#ff868686"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvReadCountMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvDateMessage"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/tvDateMessage"
+        android:text="浏览：0"
+        android:textColor="#ff868686"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tvDateMessage"
+        android:layout_marginTop="20dp"
+        android:background="@color/_e7e7e7" />
+
+</RelativeLayout>

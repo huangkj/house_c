@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/muti_bg_title" >
+        </ImageView>
+
+        <!-- return -->
+		<LinearLayout 
+			android:id="@+id/layout_return"
+			android:layout_width="50dip" 
+			android:layout_height="fill_parent" 
+			android:gravity="center"  
+            android:onClick="cancel"
+			android:orientation="horizontal" > 
+			<!-- return -->
+			<ImageView
+		        android:id="@+id/i_return" 
+		        android:layout_width="23dip"
+		        android:layout_height="20dip"           
+		         
+            	android:onClick="cancel"
+		        android:layout_marginLeft="10dip"
+				android:src="@drawable/muti_return"
+				android:visibility="gone" 
+			/>  
+	        <Button
+	            android:id="@+id/txt_back"
+	            android:layout_width="60dp"
+	            android:layout_height="35dp"
+	            
+            	android:onClick="cancel"
+		        android:layout_marginLeft="10dip" 
+	            android:background="@null"
+	            android:gravity="center" 
+	            android:text=" 取消"
+	            android:textColor="#ffffff"
+	            android:textSize="16sp"  />
+		</LinearLayout> 
+
+        <TextView
+            android:id="@+id/photo_album_chooseNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择照片"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="26dip"
+        android:padding="5dip"
+        android:orientation="vertical" >
+        <GridView
+            android:id="@+id/album_gridview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:horizontalSpacing="2dip"
+            android:numColumns="3"
+            android:verticalSpacing="2dip" />
+    </LinearLayout>
+
+</LinearLayout>

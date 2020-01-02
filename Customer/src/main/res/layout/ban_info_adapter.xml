@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_ban"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"
+                android:maxLength="11"
+                android:ellipsize="end"
+                android:gravity="bottom"
+                style="@style/FontStyleBlackBig"/>
+
+            <TextView
+                android:id="@+id/tv_sale"
+                android:layout_toRightOf="@id/tv_ban"
+                android:layout_alignBottom="@id/tv_ban"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"
+                android:layout_marginBottom="2dp"
+                style="@style/FontStyleWhiteSmaller"
+                android:textSize="10sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="@drawable/shape_bg_orange_2"/>
+
+            <View
+                android:id="@+id/line"
+                android:layout_below="@id/tv_ban"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/gray_line"/>
+
+            <TextView
+                android:layout_below="@id/line"
+                android:id="@+id/tv_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开盘时间:"
+                style="@style/FontStyleGraySmaller"/>
+
+            <TextView
+                android:id="@+id/tv_open_value"
+                android:layout_alignTop="@id/tv_open"
+                android:layout_toRightOf="@id/tv_open"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_height="wrap_content"
+                android:text="---"
+                style="@style/FontStyleLightBlackSmaller"/>
+
+
+            <TextView
+                android:id="@+id/tv_ok_value"
+                android:layout_alignTop="@id/tv_open"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_width="78dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_height="wrap_content"
+                android:text="---"
+                style="@style/FontStyleLightBlackSmaller"/>
+
+            <TextView
+                android:layout_below="@id/line"
+                android:id="@+id/tv_ok"
+                android:layout_toLeftOf="@id/tv_ok_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontStyleGraySmaller"
+                android:text="交房时间:"/>
+
+
+            <TextView
+                android:layout_below="@id/tv_open"
+                android:id="@+id/tv_build_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="建筑类型:"
+                style="@style/FontStyleGraySmaller"/>
+
+            <TextView
+                android:id="@+id/tv_build_type_value"
+                android:layout_alignTop="@id/tv_build_type"
+                android:layout_toRightOf="@id/tv_build_type"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="---"
+                style="@style/FontStyleLightBlackSmaller"/>
+
+
+            <TextView
+                android:id="@+id/tv_property"
+                android:layout_below="@id/tv_ok_value"
+                android:layout_marginTop="10dp"
+                android:layout_alignLeft="@id/tv_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="装修标准:"
+                style="@style/FontStyleGraySmaller"/>
+
+            <TextView
+                android:id="@+id/tv_property_value"
+                android:layout_alignTop="@id/tv_property"
+                android:layout_toRightOf="@id/tv_property"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="---"
+                style="@style/FontStyleLightBlackSmaller"/>
+
+
+            <TextView
+                android:layout_below="@id/tv_build_type"
+                android:id="@+id/tv_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="单元数:"
+                style="@style/FontStyleGraySmaller"/>
+
+            <TextView
+                android:id="@+id/tv_unit_value"
+                android:layout_alignTop="@id/tv_unit"
+                android:layout_toRightOf="@id/tv_unit"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_height="wrap_content"
+                android:text="---"
+                style="@style/FontStyleLightBlackSmaller"/>
+
+            <TextView
+                android:id="@+id/tv_ladder"
+                android:layout_below="@id/tv_property"
+                android:layout_marginTop="10dp"
+                android:layout_alignLeft="@id/tv_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="梯户比:"
+                style="@style/FontStyleGraySmaller"/>
+
+            <TextView
+                android:id="@+id/tv_ladder_value"
+                android:layout_alignTop="@id/tv_ladder"
+                android:layout_toRightOf="@id/tv_ladder"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="---"
+                style="@style/FontStyleLightBlackSmaller"/>
+
+            <TextView
+                android:layout_below="@id/tv_unit"
+                android:id="@+id/tv_floor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="层数:"
+                style="@style/FontStyleGraySmaller"/>
+
+            <TextView
+                android:id="@+id/tv_floor_value"
+                android:layout_alignTop="@id/tv_floor"
+                android:layout_toRightOf="@id/tv_floor"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"
+                style="@style/FontStyleLightBlackSmaller"/>
+
+            <TextView
+                android:id="@+id/tv_saling"
+                android:layout_below="@id/tv_ladder"
+                android:layout_marginTop="5dp"
+                android:layout_alignLeft="@id/tv_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在售房源:"
+                style="@style/FontStyleGraySmaller"/>
+
+            <TextView
+                android:id="@+id/tv_saling_value"
+                android:layout_alignTop="@id/tv_saling"
+                android:layout_toRightOf="@id/tv_saling"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="暂无数据"
+                style="@style/FontStyleLightBlackSmaller"/>
+
+        </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.easylife.house.customer.view.PaletteView
+        android:id="@+id/signatureView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/GrayLighter"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.easylife.house.customer.view.ButtonTouch
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/GrayLighter"
+            android:text="清除" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            android:background="@color/Gray" />
+
+        <com.easylife.house.customer.view.ButtonTouch
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/GrayLighter"
+            android:text="保存" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <com.bigkoo.convenientbanner.ConvenientBanner
+            android:id="@+id/bannerHome"
+            android:layout_width="match_parent"
+            android:layout_height="160dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpIndex"
+            android:layout_width="match_parent"
+            android:layout_height="185dp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vpIndex"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <RadioButton
+                android:id="@+id/mIndicator0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/selector_indicator_index"
+                android:checked="true"
+                android:enabled="false" />
+
+            <RadioButton
+                android:id="@+id/mIndicator1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:button="@drawable/selector_indicator_index"
+                android:enabled="false" />
+
+
+            <RadioButton
+                android:id="@+id/mIndicator2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/selector_indicator_index"
+                android:enabled="false"
+                android:visibility="gone" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/iv_toutiao_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="10dp">
+
+        <com.easylife.house.customer.view.AutoVerticalTextview
+            android:id="@+id/wheelAd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="105dp"
+            android:layout_marginRight="16dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="消息资讯"
+        android:textColor="#ff515151"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcvNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp" />
+
+    <LinearLayout
+        android:id="@+id/llCityPriceContainer"
+        android:layout_marginTop="34dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="城市行情"
+        android:textColor="#ff515151"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:orientation="horizontal"
+        android:background="@mipmap/iv_city_price_bg"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tvCityName"
+            android:gravity="center"
+            android:text="北京房市"
+            android:layout_weight="1.6"
+            android:textColor="#ffffffff"
+            android:textSize="18sp"
+            android:layout_width="0dp"
+            android:paddingBottom="5dp"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvCityPrice"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:text="10000"
+                android:textColor="#ff333333"
+                android:textSize="24sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/全市均价 (元/平米)"
+                android:textColor="#ff8b8b8b"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvHotHouseTx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:text="热门楼盘"
+        android:textColor="#ff515151"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

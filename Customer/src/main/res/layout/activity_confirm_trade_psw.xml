@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.mine.card.InputTraderPasswordActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="41dp"
+        android:text="请再次输入"
+        android:textColor="#ff535353"
+        android:textSize="15sp" />
+
+
+    <com.easylife.house.customer.view.PasswordView
+        android:id="@+id/passwordViewInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        app:borderColor="#f0f0f0f0"
+        app:cipherEnable="true"
+        app:mode="rect"
+        app:passwordLength="6" />
+
+
+    <TextView
+        android:id="@+id/tvForgetPasswordInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="43dp"
+        android:text="忘记密码？"
+        android:textColor="#ffff6800"
+        android:textSize="13sp"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="#f8f8f8">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="88dp"
+            android:text="*本交易密码为好生活好房平台交易使用*"
+            android:textColor="#ff535353"
+            android:textSize="13sp" />
+
+
+        <com.easylife.house.customer.view.ButtonTouch
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pub_title_bar_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/shape_bg_btn_gradient"
+            android:text="确认"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

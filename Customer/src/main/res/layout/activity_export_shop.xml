@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:fitsSystemWindows="true">
+
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:background="@color/transparent"
+            android:layout_marginBottom="@dimen/dp_42"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:fitsSystemWindows="true"
+                android:orientation="vertical">
+
+                <include layout="@layout/export_shop_title" />
+                <include layout="@layout/export_shop_look" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/gray_f8" />
+
+                <TextView
+                    style="@style/FontStyleBlackMiddle"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="18dp"
+                    android:gravity="center_vertical"
+                    android:text="用户评价" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="18dp"
+                    android:background="@color/gray_f8" />
+
+                <!--<include layout="@layout/export_comment_list"/>-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_comment_all"
+                    style="@style/FontStyleEndSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:text="查看全部" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/gray_f8" />
+
+                <TextView
+                    style="@style/FontStyleBlackMiddle"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="18dp"
+                    android:gravity="center_vertical"
+                    android:text="成交房源" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="18dp"
+                    android:background="@color/gray_f8" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_homes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="18dp"
+                    android:background="@color/gray_f8" />
+
+                <TextView
+                    android:id="@+id/tv_homes_all"
+                    style="@style/FontStyleEndSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:text="查看全部" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/gray_f8" />
+
+                <TextView
+                    style="@style/FontStyleBlackMiddle"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="18dp"
+                    android:gravity="center_vertical"
+                    android:text="所售楼盘" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="18dp"
+                    android:background="@color/gray_f8" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_houses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="18dp"
+                    android:background="@color/gray_f8" />
+
+                <TextView
+                    android:id="@+id/tv_houses_all"
+                    style="@style/FontStyleEndSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:text="查看全部" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/gray_f8" />
+
+                <TextView
+                    style="@style/FontStyleBlackMiddle"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="18dp"
+                    android:gravity="center_vertical"
+                    android:text="TA的证书" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="18dp"
+                    android:background="@color/gray_f8" />
+
+                <include layout="@layout/export_his_idc" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="18dp"
+                    android:background="@color/gray_f8" />
+
+                <TextView
+                    android:id="@+id/tv_his_idc_all"
+                    style="@style/FontStyleEndSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:text="查看全部" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/gray_f8" />
+
+                <TextView
+                    style="@style/FontStyleBlackMiddle"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="18dp"
+                    android:gravity="center_vertical"
+                    android:text="TA的动态" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="18dp"
+                    android:background="@color/gray_f8" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_his_dymanic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="18dp"
+                    android:background="@color/gray_f8" />
+
+                <TextView
+                    android:id="@+id/tv_his_dymanic"
+                    style="@style/FontStyleEndSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="15dp"
+                    android:text="查看全部" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/btn_call"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/gradient_end"
+            android:layout_alignParentBottom="true"
+            android:text="打电话"
+            android:textColor="@color/white"/>
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/tvHouseName"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_height="wrap_content"
+            android:text="楼盘信息"
+            android:layout_toLeftOf="@+id/tvDateApplyBrokerageItem"
+            android:textColor="#ff535353"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/tvDateApplyBrokerageItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2018/01/01"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="right"
+            android:textColor="#99535353"
+            android:textSize="13sp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvUserNameBrokerageItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="王语嫣（13256789807）"
+        android:textColor="#ff535353"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvShouldBrokerageItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="应结佣：¥25000.00"
+        android:textColor="#ffff6800"
+        android:textSize="15sp" />
+
+
+    <include
+        layout="@layout/cut_line_h"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp" />
+</LinearLayout>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GrayLighter"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_developers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开发商:"
+                style="@style/FontStyleBlackSmall"/>
+
+            <TextView
+                android:id="@+id/tv_dvp_value"
+                android:layout_toRightOf="@id/tv_developers"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"/>
+
+            <TextView
+                android:layout_below="@id/tv_developers"
+                android:id="@+id/tv_open"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最新开盘:"
+                style="@style/FontStyleBlackSmall"/>
+
+            <TextView
+                android:id="@+id/tv_open_value"
+                android:layout_toRightOf="@id/tv_open"
+                android:layout_alignTop="@id/tv_open"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"/>
+
+            <TextView
+                android:layout_below="@id/tv_open"
+                android:id="@+id/tv_complete"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预计交房:"
+                style="@style/FontStyleBlackSmall"/>
+
+            <TextView
+                android:id="@+id/tv_complete_value"
+                android:layout_toRightOf="@id/tv_complete"
+                android:layout_alignTop="@id/tv_complete"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"/>
+
+            <TextView
+                android:layout_below="@id/tv_complete"
+                android:id="@+id/tv_agree"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预售许可证:"
+                style="@style/FontStyleBlackSmall"/>
+
+            <TextView
+                android:id="@+id/tv_agree_value"
+                android:layout_toRightOf="@id/tv_agree"
+                android:layout_alignTop="@id/tv_agree"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物业类型:"
+                style="@style/FontStyleBlackSmall"/>
+
+            <TextView
+                android:id="@+id/tv_type_value"
+                android:layout_toRightOf="@id/tv_type"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"/>
+
+            <TextView
+                android:layout_below="@id/tv_type"
+                android:id="@+id/tv_build"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="建筑类别:"
+                style="@style/FontStyleBlackSmall"/>
+
+            <TextView
+                android:id="@+id/tv_build_value"
+                android:layout_toRightOf="@id/tv_build"
+                android:layout_alignTop="@id/tv_build"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"/>
+
+            <TextView
+                android:layout_below="@id/tv_build"
+                android:id="@+id/tv_year"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="产权年限:"
+                style="@style/FontStyleBlackSmall"/>
+
+            <TextView
+                android:id="@+id/tv_year_value"
+                android:layout_toRightOf="@id/tv_year"
+                android:layout_alignTop="@id/tv_year"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"/>
+
+            <TextView
+                android:layout_below="@id/tv_year"
+                android:id="@+id/tv_standard"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="装修标准:"
+                style="@style/FontStyleBlackSmall"/>
+
+            <TextView
+                android:id="@+id/tv_standard_value"
+                android:layout_toRightOf="@id/tv_standard"
+                android:layout_alignTop="@id/tv_standard"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="容积率:"
+                style="@style/FontStyleBlackSmall"/>
+
+            <TextView
+                android:id="@+id/tv_rate_value"
+                android:layout_toRightOf="@id/tv_rate"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"/>
+
+            <TextView
+                android:layout_below="@id/tv_rate"
+                android:id="@+id/tv_green"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="绿化率:"
+                style="@style/FontStyleBlackSmall"/>
+
+            <TextView
+                android:id="@+id/tv_green_value"
+                android:layout_toRightOf="@id/tv_green"
+                android:layout_alignTop="@id/tv_green"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"/>
+
+            <TextView
+                android:layout_below="@id/tv_green"
+                android:id="@+id/tv_car"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="车位配比:"
+                style="@style/FontStyleBlackSmall"/>
+
+            <TextView
+                android:id="@+id/tv_car_value"
+                android:layout_toRightOf="@id/tv_car"
+                android:layout_alignTop="@id/tv_car"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"/>
+
+            <TextView
+                android:layout_below="@id/tv_car"
+                android:id="@+id/tv_money"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物业费:"
+                style="@style/FontStyleBlackSmall"/>
+
+            <TextView
+                android:id="@+id/tv_money_value"
+                android:layout_toRightOf="@id/tv_money"
+                android:layout_alignTop="@id/tv_money"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"/>
+
+            <TextView
+                android:layout_below="@id/tv_money"
+                android:id="@+id/tv_company"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="物业公司:"
+                style="@style/FontStyleBlackSmall"/>
+
+            <TextView
+                android:id="@+id/tv_company_value"
+                android:layout_toRightOf="@id/tv_company"
+                android:layout_alignTop="@id/tv_company"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"/>
+
+            <TextView
+                android:layout_below="@id/tv_company"
+                android:id="@+id/tv_address"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="项目地址:"
+                style="@style/FontStyleBlackSmall"/>
+
+            <TextView
+                android:layout_below="@id/tv_address"
+                android:id="@+id/tv_project_address"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="售楼处地址:"
+                style="@style/FontStyleBlackSmall"/>
+
+            <TextView
+                android:id="@+id/tv_project_address_value"
+                android:layout_toRightOf="@id/tv_project_address"
+                android:layout_alignTop="@id/tv_project_address"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"/>
+
+            <TextView
+                android:id="@+id/tv_address_value"
+                android:layout_toRightOf="@id/tv_address"
+                android:layout_alignTop="@id/tv_address"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

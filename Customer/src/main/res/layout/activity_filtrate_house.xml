@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.houses.findhouse.FiltrateHouseActivity">
+
+    <LinearLayout
+        android:layout_marginTop="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginLeft="24dp"
+            android:id="@+id/tvBudget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/budget_bg"
+            android:paddingLeft="14dp"
+            android:paddingTop="4dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="4dp"
+            android:text="购房预算100万-500万"
+            android:textColor="#ff444345"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/tvRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/budget_bg"
+            android:paddingLeft="14dp"
+            android:paddingTop="4dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="4dp"
+            android:text="一室"
+            android:textColor="#ff444345"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/tvCountDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="共0个楼盘符合您的意向购房需求"
+        android:textColor="#ffff8400"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/relCompareCount"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="24dp"
+            android:layout_alignParentBottom="true"
+            android:background="@mipmap/iv_count"
+            android:layout_width="68dp"
+            android:layout_height="68dp">
+
+            <TextView
+                android:id="@+id/tvCompareCount"
+                android:layout_marginBottom="4dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffff6800"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

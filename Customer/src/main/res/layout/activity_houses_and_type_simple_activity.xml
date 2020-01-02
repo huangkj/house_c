@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/gray_f8"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:src="@mipmap/back_black" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/id_tablayout"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="2dp"
+            app:tabIndicatorColor="@color/gradient_end"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/gradient_end"
+            app:tabTextAppearance="@style/MyTabLayoutTextAppearance" />
+
+        <ImageView
+            android:id="@+id/iv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:src="@mipmap/share" />
+
+        <ImageView
+            android:id="@+id/ivRecommend"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/iv_share"
+            android:paddingRight="20dp"
+            android:src="@mipmap/icon_invalid" />
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_top" />
+
+    <include layout="@layout/houses_bottom_tab_simple" />
+
+</RelativeLayout>

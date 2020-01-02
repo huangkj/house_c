@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无符合您的意向楼盘～"
+            android:textColor="#ff666666"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btnBackSelect"
+            android:layout_width="180dp"
+            android:layout_height="@dimen/pub_title_bar_height"
+            android:layout_marginLeft="18dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/shape_quick_login_bg_btn_gradient"
+            android:text="返回重选 >"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+</RelativeLayout>

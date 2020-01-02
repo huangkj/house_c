@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+    android:background="@color/white"
+    android:elevation="2dp"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/rl_collect"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/iv_collect"
+                android:layout_width="16dp"
+                android:layout_height="14dp"
+                android:background="@drawable/detail_collect_check"
+                android:button="@null"
+                android:clickable="false" />
+
+            <TextView
+                style="@style/FontStyleGraySmaller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:clickable="false"
+                android:text="收藏"
+                android:textColor="#ff868686"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_look"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:button="@null"
+                android:clickable="false"
+                android:src="@mipmap/icon_yueyuekanfang" />
+
+            <TextView
+                style="@style/FontStyleGraySmaller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:clickable="false"
+                android:text="预约看房"
+                android:textColor="#ff868686"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+        <!--
+                <LinearLayout
+                    android:id="@+id/rl_sub"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@mipmap/house_sub2" />
+
+                    <TextView
+                        style="@style/FontStyleGraySmaller"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:clickable="false"
+                        android:text="订阅"
+                        android:textColor="#ff868686"
+                        android:textSize="10sp" />
+
+
+                </LinearLayout>-->
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="9"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tvRecommend"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="13dp"
+            android:layout_weight="1"
+            android:background="@drawable/yuyue_kanfang_bg"
+            android:gravity="center"
+            android:text="推荐好友"
+            android:textColor="#ffffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_call"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="13dp"
+            android:layout_weight="1"
+            android:background="@drawable/yuyue_kanfang_bg2"
+            android:gravity="center"
+            android:text="电话咨询"
+            android:textColor="#ffffffff"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+
+    <!--
+
+        <RelativeLayout
+            android:id="@+id/rl_collect"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/gray_line_de" />
+
+            <CheckBox
+                android:id="@+id/iv_collect"
+                android:layout_width="18dp"
+                android:layout_height="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/detail_collect_check"
+                android:button="@null"
+                android:clickable="false" />
+
+            <TextView
+                style="@style/FontStyleGraySmaller"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:clickable="false"
+                android:gravity="center"
+                android:paddingTop="23dp"
+                android:text="收藏" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lay1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.46"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line_de" />
+
+            <RelativeLayout
+                android:id="@+id/rl_ask"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray_line_de" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:src="@mipmap/consult2" />
+
+                <TextView
+                    style="@style/FontStyleGraySmaller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="bottom"
+                    android:paddingBottom="4dp"
+                    android:text="咨询" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line_de" />
+
+            <RelativeLayout
+                android:id="@+id/rl_sub"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/gray_line_de" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:src="@mipmap/house_sub" />
+
+                <TextView
+                    android:id="@+id/tvSub"
+                    style="@style/FontStyleGraySmaller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="bottom"
+                    android:paddingBottom="4dp"
+                    android:text="订阅" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_look"
+                style="@style/FontStyleWhiteSmall"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/gradient_end"
+                android:gravity="center"
+                android:text="预约看房" />
+
+            <ImageView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/gradient_end"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:src="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_call"
+            style="@style/FontStyleWhiteSmall"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.26"
+            android:background="@color/gradient_end"
+            android:gravity="center"
+            android:text="打电话" />
+    -->
+
+</LinearLayout>

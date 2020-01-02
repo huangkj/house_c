@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_export"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <com.easylife.house.customer.view.photoview.RoundedImageView
+        android:id="@+id/team_head"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:corner="90dp"
+        android:src="@mipmap/default_head"/>
+
+    <TextView
+        android:id="@+id/team_name"
+        style="@style/FontStyleLightBlackSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/team_head"
+        android:layout_toLeftOf="@+id/lliv"
+        android:layout_alignTop="@id/team_head"
+        android:singleLine="true"
+        android:layout_marginTop="3dp"
+        android:ellipsize="end"
+        android:textSize="@dimen/sp_12"
+        android:text="---"/>
+
+    <TextView
+        android:id="@+id/team_good"
+        android:layout_below="@id/team_name"
+        android:layout_alignLeft="@id/team_name"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="好评率:"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/team_good_value"
+        android:layout_toRightOf="@id/team_good"
+        android:layout_alignTop="@id/team_good"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/team_look"
+        android:layout_toRightOf="@id/team_good_value"
+        android:layout_alignTop="@id/team_good_value"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="近30天带看:"
+        android:textSize="10sp"/>
+
+    <TextView
+        android:id="@+id/team_look_value"
+        android:layout_toRightOf="@id/team_look"
+        android:layout_alignTop="@id/team_look"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0次"
+        android:textSize="10sp"/>
+
+
+    <LinearLayout
+        android:id="@+id/lliv"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/team_phone"
+            android:layout_width="wrap_content"
+            android:padding="15dp"
+            android:layout_toLeftOf="@id/line"
+            android:layout_alignTop="@id/team_name"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:drawableLeft="@mipmap/phone" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_alignTop="@id/team_name"
+            android:background="@color/gray_line"/>
+
+        <ImageView
+            android:id="@+id/iv_team_chat"
+            android:layout_width="40dp"
+            android:padding="13dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            style="@style/FontStyleEndSmall"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/send_im"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

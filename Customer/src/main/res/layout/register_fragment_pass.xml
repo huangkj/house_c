@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="18dp">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="创建密码"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="国家地区"
+            android:textColor="@color/text_normal"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中国大陆"
+            android:textColor="@color/text_normal"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="+86"
+            android:textColor="@color/text_normal"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layVerifyCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.easylife.house.customer.view.EditTextClearAble
+                android:id="@+id/edPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="请输入6-16位字符"
+                android:maxLength="16"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="12sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/cbShowPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/layVerifyCode"
+            android:layout_alignParentRight="true"
+            android:button="@null"
+            android:padding="10dp"
+            android:text="隐藏"
+            android:textColor="@color/text_orange_or_black"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <include layout="@layout/include_line_hor_orange" />
+
+    <com.easylife.house.customer.view.ButtonTouch
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pub_title_bar_height"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/shape_bg_btn_gradient"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</LinearLayout>

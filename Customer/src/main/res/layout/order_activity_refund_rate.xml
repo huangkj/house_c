@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/GrayLighter"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="您的退款金额：" />
+
+                <TextView
+                    android:id="@+id/tvMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="开户行：" />
+
+                <TextView
+                    android:id="@+id/tvBankSubName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="银行卡号：" />
+
+                <TextView
+                    android:id="@+id/tvBankCardNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="收款人：" />
+
+                <TextView
+                    android:id="@+id/tvPayeeName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="退款理由：" />
+
+                <TextView
+                    android:id="@+id/tvDescRefund"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:padding="15dp"
+            android:text="退款进度" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgPoint11"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/circle_end" />
+
+                    <View
+                        android:id="@+id/imgLine11"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="7dp"
+                        android:background="@color/gradient_end" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="-2dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tvRefundApply"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:text="申请退款"
+                        android:textColor="#666565"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefundApplyTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="80dp"
+                        android:button="@null"
+                        android:textColor="@color/GrayLight"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/imgRefundApply"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:button="@null"
+                        android:padding="5dp"
+                        android:src="@mipmap/arrow_up"
+                        android:textColor="@color/GrayLight"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefundApplyDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvRefundApply"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="80dp"
+                        android:button="@null"
+                        android:text="您的退款申请资料提交成功，我们会在第一时间对您的资料进行审核。因房产交易设计资料较多，我们可能需要较长时间进行审核，请您耐心等待。"
+                        android:textColor="@color/GrayLight"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgPoint12"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/circle_gray" />
+
+                    <View
+                        android:id="@+id/imgLine12"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="7dp"
+                        android:background="@color/Gray" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="-2dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tvRefundCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:button="@null"
+                        android:text="退款审核完成"
+                        android:textColor="#bebdbd"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefundCheckTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="80dp"
+                        android:button="@null"
+                        android:textColor="@color/GrayLight"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/imgRefundCheck"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:button="@null"
+                        android:padding="5dp"
+                        android:src="@mipmap/arrow_up"
+                        android:textColor="@color/GrayLight"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvRefundCheckDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvRefundCheck"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="80dp"
+                        android:button="@null"
+                        android:text="您的退款申请资料已经通过审核，我们将尽快为您办理退款。"
+                        android:textColor="@color/GrayLight"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layRefund"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgPoint13"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/circle_gray" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="-2dp"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tvRefundComplete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="30dp"
+                        android:button="@null"
+                        android:text="退款完成"
+                        android:textColor="#bebdbd"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvRefundCompleteTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="80dp"
+                        android:button="@null"
+                        android:textColor="@color/GrayLight"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/imgRefundComplete"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:button="@null"
+                        android:padding="5dp"
+                        android:src="@mipmap/arrow_up"
+                        android:textColor="@color/GrayLight"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvRefundCompleteDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvRefundComplete"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="80dp"
+                        android:button="@null"
+                        android:text="您的退款预计1~7个工作日可退至您提交的银行卡内（如未提交，则会原路退换），请您及时关注账户变化。"
+                        android:textColor="@color/GrayLight"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

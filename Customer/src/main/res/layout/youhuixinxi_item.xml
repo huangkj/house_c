@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/youhuixinxi_item_bg"
+    android:paddingBottom="13dp">
+
+
+    <TextView
+        android:id="@+id/tvYouhuiTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="13dp"
+        android:ellipsize="end"
+        android:paddingRight="5dp"
+        android:singleLine="true"
+        android:text="13万抵一口价"
+        android:textColor="#ffff6800"
+        android:textSize="16sp" />
+
+
+    <TextView
+        android:id="@+id/tvYouhuiDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvYouhuiTitle"
+        android:layout_alignLeft="@+id/tvYouhuiTitle"
+        android:layout_marginTop="10dp"
+        android:paddingRight="5dp"
+        android:text="适用于：五居室以上"
+        android:textColor="#ff727272"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/tvGetCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvYouhuiDesc"
+        android:layout_alignLeft="@+id/tvYouhuiTitle"
+        android:layout_marginTop="10dp"
+        android:text="13人已领取"
+        android:textColor="#ff969696"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvGetNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvGetCount"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/tvGetCount"
+        android:background="@drawable/youhui_get_now_bg"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="3dp"
+        android:text="立即领取"
+        android:textColor="#ffffffff"
+        android:textSize="11sp" />
+</RelativeLayout>

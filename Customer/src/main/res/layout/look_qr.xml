@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_300"
+    android:background="@color/transparent">
+
+    <FrameLayout
+        android:id="@+id/fl_qr"
+        android:layout_width="@dimen/db_240"
+        android:layout_height="@dimen/db_240"
+        android:layout_centerInParent="true"
+        android:translationZ="@dimen/dp_5"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_look_qr"
+            android:layout_width="@dimen/db_228"
+            android:layout_height="@dimen/db_228"
+            android:layout_gravity="center"/>
+
+    </FrameLayout>
+    
+
+
+    <FrameLayout
+        android:id="@+id/fl_cancle"
+        android:layout_toRightOf="@id/fl_qr"
+        android:layout_alignTop="@id/fl_qr"
+        android:layout_marginTop="-15dp"
+        android:layout_marginLeft="-15dp"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:translationZ="@dimen/dp_5"
+        android:padding="@dimen/dp_8"
+        android:background="@drawable/look_qr_cancle">
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_gravity="center"
+            android:background="@mipmap/edit_clear"/>
+    </FrameLayout>
+
+
+</RelativeLayout>

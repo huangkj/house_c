@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+    android:layout_alignParentBottom="true"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_marginLeft="30dp"
+        android:id="@+id/rl_ask"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            style="@style/FontStyleGraySmaller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="3dp"
+            android:drawableTop="@mipmap/consult"
+            android:text="在线解答" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_look"
+        style="@style/FontStyleWhiteSmall"
+        android:layout_width="0dp"
+        android:background="@drawable/yuyue_kanfang_bg"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="预约看房" />
+
+    <View
+        android:layout_width="20dp"
+        android:layout_height="1dp" />
+
+    <TextView
+        android:layout_marginRight="20dp"
+        android:id="@+id/tv_buy"
+        android:background="@drawable/yuyue_kanfang_bg2"
+        style="@style/FontStyleWhiteSmall"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="认购下定" />
+
+</LinearLayout>

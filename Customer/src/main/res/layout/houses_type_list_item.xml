@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gredient_1"
+        android:paddingLeft="28dp"
+        android:paddingTop="30dp"
+        android:paddingRight="28dp"
+        android:paddingBottom="35dp">
+
+        <TextView
+            android:id="@+id/tvDevName"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#484848"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvPriceUnit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/tvDevName"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:maxLines="1"
+            android:text="---"
+            android:textColor="@color/gradient_end"
+            android:textSize="14sp" />
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imgCover"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/tvDevName"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerCrop"
+            android:src="@color/bg_main_gray"
+            app:riv_corner_radius="1dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDevName"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/imgCover">
+
+            <TextView
+                android:id="@+id/tvSaleStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_bg_btn_orange_null_2"
+                android:gravity="center"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:text="在售"
+                android:textColor="#ffa600"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/tvHouseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tvSaleStatus"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/text_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvHouseName"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="---"
+                android:textColor="#8b8b8b"
+                android:textSize="12sp" />
+
+            <com.easylife.house.customer.view.FlowViewGroup
+                android:id="@+id/groupTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLocation"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp" />
+
+            <TextView
+                android:id="@+id/tvPriceTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/groupTags"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="---"
+                android:textColor="@color/gradient_end"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/tvMonthIntegral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="18dp"
+        android:text="10"
+        android:textColor="#ffbcbcbc"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tvSignIntegral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/tvMonthIntegral"
+        android:text="签到"
+        android:textColor="#ff353535"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvSaveIntegral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvSignIntegral"
+        android:layout_below="@+id/tvSignIntegral"
+        android:layout_marginTop="6dp"
+        android:text="余额：440"
+        android:textColor="#ff868686"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:id="@+id/tvChangeIntegral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="18dp"
+        android:text="+10"
+        android:textColor="#ffff6800"
+        android:textSize="18sp" />
+
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvSaveIntegral"
+        android:layout_alignTop="@+id/tvSignIntegral"
+        android:layout_marginLeft="13dp"
+        android:layout_toRightOf="@+id/tvMonthIntegral"
+        android:background="@color/_e7e7e7" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.01dp"
+        android:layout_below="@+id/tvSaveIntegral"
+        android:layout_marginTop="12dp"
+        android:background="@color/_e7e7e7" />
+</RelativeLayout>

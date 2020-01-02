@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_dymanic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_dynamic_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/FontStyleGrayMiddle66"
+        android:text="-----"/>
+
+    <TextView
+        android:id="@+id/tv_dynamic_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="2"
+        android:layout_marginTop="10dp"
+        android:text="-----"/>
+
+    <TextView
+        android:id="@+id/tv_dynamic_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="-----"/>
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/gradient_end" />
+    <item android:drawable="@color/gradient_endPress" android:state_pressed="true" />
+
+</selector>

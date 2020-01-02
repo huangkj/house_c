@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="loginTextTip" parent="@android:style/TextAppearance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#C4C4C4</item>
+    </style>
+
+    <!-- 白色小号字体-->
+    <style name="FontStyleWhiteSmall" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- 白色中号字体 -->
+    <style name="FontStyleWhiteMiddle" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!-- 白色大号字体 -->
+    <style name="FontStyleWhiteBig" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <!-- 白色字体17-->
+    <style name="FontStyleWhite17" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <!--  白色特小号字体 -->
+    <style name="FontStyleWhiteSmaller" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- 黑色小号字体-->
+    <style name="FontStyleBlackSmall" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- 黑色中号字体 -->
+    <style name="FontStyleBlackMiddle" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!-- 黑色大号字体 -->
+    <style name="FontStyleBlackBig" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--  黑色特小号字体 -->
+    <style name="FontStyleBlackSmaller" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!-- 黑色字体14-->
+    <style name="FontStyleBlack14_595c59" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#595c59</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- 浅黑色小号字体-->
+    <style name="FontStyleLightBlackSmall" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#444345</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- 浅黑色中号字体 -->
+    <style name="FontStyleLightBlackMiddle" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#444345</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!-- 浅黑色大号字体 -->
+    <style name="FontStyleLightBlackBig" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#444345</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--  浅黑色特小号字体 -->
+    <style name="FontStyleLightBlackSmaller" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#444345</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!-- 黑色小号字体-->
+    <style name="FontStyleGrayBlack5d14" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ff5d5d5d</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- 黑色小号字体-->
+    <style name="FontStyleGraySmall" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#55000000</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- 浅黑色中号字体 -->
+    <style name="FontStyleGrayMiddle" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#55000000</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!-- 浅黑色大号字体 -->
+    <style name="FontStyleGrayBig" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#55000000</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--  浅黑色特小号字体 -->
+    <style name="FontStyleGraySmaller" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#55000000</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- 黑色小号字体666565-->
+    <style name="FontStyleGraySmall66" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#666565</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- 浅黑色中号字体 -->
+    <style name="FontStyleGrayMiddle66" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#666565</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!-- 浅黑色大号字体 -->
+    <style name="FontStyleGrayBig66" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#666565</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--  浅黑色特小号字体 -->
+    <style name="FontStyleGraySmaller66" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#666565</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <!-- 橘黄小号字体-->
+    <style name="FontStyleStartSmall" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#FFAD00</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- 橘黄中号字体 -->
+    <style name="FontStyleStartMiddle" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#FFAD00</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!-- 橘黄大号字体 -->
+    <style name="FontStyleStartBig" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#FFAD00</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--  橘黄小号字体 -->
+    <style name="FontStyleStartSmaller" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#FFAD00</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- 橘黄小号字体-->
+    <style name="FontStyleEndSmall" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#FF6800</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- 橘黄中号字体 -->
+    <style name="FontStyleEndMiddle" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#FF6800</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!-- 橘黄大号字体 -->
+    <style name="FontStyleEndBig" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#FF6800</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <!-- 橘黄超大号字体 -->
+    <style name="FontStyleEndBigger" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#FF6800</item>
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <!--  橘黄小号字体 -->
+    <style name="FontStyleEndSmaller" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#FF6800</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <!-- 525153小号字体-->
+    <style name="FontStyle5251GraySmall" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#525153</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- 橘黄中号字体 -->
+    <style name="FontStyle5251GrayMiddle" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#525153</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!-- 橘黄大号字体 -->
+    <style name="FontStyle5251GrayBig" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#525153</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <!-- 橘黄超大号字体 -->
+    <style name="FontStyle5251GrayBigger" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#525153</item>
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <!--  橘黄小号字体 -->
+    <style name="FontStyle5251GraySmaller" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#525153</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="FontStyleGray12_66" parent="@android:style/TextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>

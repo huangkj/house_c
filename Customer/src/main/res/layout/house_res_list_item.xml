@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:paddingLeft="20dp">
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:src="@mipmap/saling_detail"/>
+
+    <TextView
+        android:id="@+id/tv_room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2室2厅1卫"
+        style="@style/FontStyleBlackSmall"
+        android:layout_toRightOf="@id/iv_img"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_simple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FontStyleBlackSmall"
+        android:layout_alignTop="@id/tv_room"
+        android:layout_toRightOf="@id/tv_room"
+        android:layout_marginLeft="10dp"
+        android:text="名厨明卫 采光充足"/>
+
+    <TextView
+        android:id="@+id/tv_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FontStyleBlackSmaller"
+        android:layout_alignLeft="@id/tv_room"
+        android:layout_below="@id/tv_room"
+        android:layout_marginTop="5dp"
+        android:text="78.7-97.4㎡"/>
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="363.8万元/套"
+        android:layout_alignLeft="@id/tv_area"
+        android:layout_below="@id/tv_area"
+        android:layout_marginTop="5dp"
+        style="@style/FontStyleBlackSmaller"/>
+
+    <ImageView
+        android:id="@+id/iv_expand"
+        android:layout_width="10dp"
+        android:layout_height="13dp"
+        android:src="@mipmap/houses_res_close"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_price"/>
+
+    <TextView
+        android:id="@+id/tv_can_sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6套可售"
+        style="@style/FontStyleEndSmaller"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/iv_expand"
+        android:layout_alignBottom="@id/iv_expand"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/_e7e7e7"
+        android:layout_below="@id/tv_can_sale"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@id/tv_price"/>
+
+</RelativeLayout>

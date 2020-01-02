@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMyBankCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/my_bank_card_item_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="36dp"
+        android:paddingTop="29dp"
+        android:paddingRight="36dp"
+        android:paddingBottom="32dp">
+
+        <TextView
+            android:id="@+id/tvBankNameMyBankCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中国工商银行"
+            android:textColor="#ffffffff"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/tvCardTypeMyBankCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="储蓄卡"
+            android:textColor="#ffffffff"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="**** **** **** "
+                android:textColor="#77ffffff"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvBankCardNumberMyBankCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8636"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:drawableLeft="@mipmap/icon_tip_comlete_bankcard_info"
+        android:drawablePadding="4dp"
+        android:text="补充信息"
+        android:textColor="@color/white"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_pub_bg_white"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tvHeadLineTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pub_padding_bg"
+        android:layout_marginRight="@dimen/pub_padding_bg"
+        android:layout_marginTop="@dimen/pub_padding_bg"
+        android:ellipsize="end"
+        android:maxLines="2" />
+
+    <TextView
+        android:id="@+id/tvHeadLineDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="@dimen/pub_padding_bg"
+        android:layout_marginRight="@dimen/pub_padding_bg"
+        android:layout_marginTop="5dp"
+        android:gravity="right"
+        android:textColor="@color/text_hint" />
+
+    <include layout="@layout/include_line_hor_left_18" />
+
+</LinearLayout>

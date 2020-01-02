@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/GrayLighter"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:text="到账银行卡"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvCardName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:drawableRight="@mipmap/more"
+                        android:drawablePadding="5dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="退款金额"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="1.00元"
+                        android:textColor="@color/btn_bg_red"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="上传退款凭证"
+                        android:textColor="@color/text_normal"
+                        android:textSize="16sp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="选择退款原因"
+                        android:textColor="@color/text_normal"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:text="请根据您的实际情况选择， 有助于我们更好的改进产品和服务。"
+                        android:textColor="#99535353"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <RadioButton
+                        android:id="@+id/rabtn0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableRight="@drawable/selector_radio_check"
+                        android:padding="15dp"
+                        android:text="不想要了"
+                        android:textColor="@color/text_normal"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/gray_line" />
+
+                    <RadioButton
+                        android:id="@+id/rabtn1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@drawable/selector_radio_check"
+                        android:padding="15dp"
+                        android:text="看中其他楼盘了"
+                        android:textColor="@color/text_normal"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/gray_line" />
+
+                    <RadioButton
+                        android:id="@+id/rabtn2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@drawable/selector_radio_check"
+                        android:padding="15dp"
+                        android:text="已经买房了"
+                        android:textColor="@color/text_normal"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/gray_line" />
+
+                    <RadioButton
+                        android:id="@+id/rabtn3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@drawable/selector_radio_check"
+                        android:padding="15dp"
+                        android:text="去过了，不太满意"
+                        android:textColor="@color/text_normal"
+                        android:textSize="15sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/gray_line" />
+
+                    <RadioButton
+                        android:id="@+id/rabtn4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:drawableRight="@drawable/selector_radio_check"
+                        android:padding="15dp"
+                        android:text="其他"
+                        android:textColor="@color/text_normal"
+                        android:textSize="15sp" />
+
+
+                    <EditText
+                        android:id="@+id/edDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/shape_bg_edit_text_refund"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="left"
+                        android:hint="请在此输入您的退款原因"
+                        android:maxLength="50"
+                        android:minLines="4"
+                        android:padding="16dp"
+                        android:textColorHint="#A4A4A4"
+                        android:textSize="14sp" />
+                </RadioGroup>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <CheckBox
+                android:id="@+id/cbAgreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/selector_cb_check"
+                android:checked="true"
+                android:text="  我已阅读并同意"
+                android:textColor="#9A9A9A"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvAgreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="《好生活会员服务退款函》"
+                android:textColor="@color/gradient_end"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <com.easylife.house.customer.view.ButtonTouch
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/shape_bg_btn_gradient"
+            android:text="申请退款"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <include layout="@layout/pub_toast_tip_apply_refund" />
+</RelativeLayout>

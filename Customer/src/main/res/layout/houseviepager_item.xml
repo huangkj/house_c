@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_pager"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_185"
+    android:background="@mipmap/club_coupon"
+    android:orientation="vertical">
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_image"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/dp_185"-->
+    <!--android:background="@mipmap/club_coupon"/>-->
+
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="2500000元"
+        android:textColor="@color/white"
+        android:textSize="40sp" />
+
+
+    <TextView
+        android:id="@+id/tvprice_ch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/dp_35"
+        android:layout_marginTop="@dimen/dp_10"
+        android:ellipsize="end"
+        android:maxEms="7"
+        android:maxLines="1"
+        android:text="二百五十万抵八十万二百五十万抵八十万"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@drawable/rect_white_line"
+        android:paddingLeft="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_15"
+        android:paddingBottom="@dimen/dp_5"
+        android:text="适用于：五居及以上"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shape_bg_dialog"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:text="分批支付说明"
+            android:textColor="#4c4c4c"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="分批支付功能主要用于以下情况"
+            android:textColor="@color/btn_bg_red"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="1.分批支付适用于银行限额、卡内余额不足等原因，导致无法一次性支付完整订单金额\n\n2.分批支付支持多种支付方式混合使用\n\n3.分批支付不限制支付次数，但需要在48小时内付清全部金额\n\n4.每次分批支付的金额需手动输入，且只能输入整数金额"
+            android:textColor="#4c4c4c"
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_empty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_gray">
+
+
+    <LinearLayout
+        android:id="@+id/layTop"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/pub_padding_bg_15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自定义："
+            android:textColor="@color/black" />
+
+        <com.easylife.house.customer.view.NumberLimitEditText
+            android:id="@+id/tvRate"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bottom_line_gray_rate"
+            android:hint="请选择利率"
+            android:inputType="numberDecimal"
+            android:textColor="@color/text_normal"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="%"
+            android:textColor="@color/text_normal" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layTop"
+        android:padding="@dimen/pub_padding_bg_15"
+        android:text="或选择商贷利率"
+        android:textColor="@color/text_normal"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDesc" />
+</RelativeLayout>

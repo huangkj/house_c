@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/layUserInfoContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/bg_mine" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:padding="20dp">
+
+                        <com.easylife.house.customer.view.photoview.RoundedImageView
+                            android:id="@+id/imgUserHeader"
+                            android:layout_width="74dp"
+                            android:layout_height="74dp"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginRight="15dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/user_default_head"
+                            app:corner="90dp" />
+
+                        <ImageView
+                            android:id="@+id/btnSettings"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="20dp"
+                            android:padding="5dp"
+                            android:src="@mipmap/icon_mine_settings" />
+
+                        <TextView
+                            android:id="@+id/tvUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/imgUserHeader"
+                            android:layout_toRightOf="@id/imgUserHeader"
+                            android:ellipsize="end"
+                            android:imeActionLabel="@id/imgUserHeader"
+                            android:maxLines="1"
+                            android:text="注册/登录"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:id="@+id/layScore"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/imgUserHeader"
+                            android:layout_toRightOf="@id/imgUserHeader"
+                            android:orientation="horizontal"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="我的积分"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tvScore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:drawableRight="@mipmap/arrow_right_mine"
+                                android:drawablePadding="5dp"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="150dp"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/layRecommend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/bg_mine_card"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="推荐有礼"
+                            android:textColor="#515151"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/btnRecommend"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableTop="@mipmap/icon_mine_recommen"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:text="我要推荐"
+                                android:textColor="#535353"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/btnMineRecommend"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableTop="@mipmap/icon_mine_my_recommend"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:text="我的推荐"
+                                android:textColor="#535353"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/btnMyCommission"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableTop="@mipmap/icon_mine_my_commission"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:text="我的佣金"
+                                android:textColor="#535353"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/bg_mine_card"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="在线选房"
+                            android:textColor="#515151"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/btnOrders"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableTop="@mipmap/icon_1_order"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:text="我的订单"
+                                android:textColor="#535353"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/btnBuyHouse"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableTop="@mipmap/icon_1_house"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:text="我要找房"
+                                android:textColor="#535353"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:id="@+id/btnCollect"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableTop="@mipmap/icon_1_collect"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:text="我的收藏"
+                                android:textColor="#535353"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/bg_mine_card"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="会员专享"
+                    android:textColor="#515151"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btnRecommen"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/icon_mine_store"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="积分商城"
+                        android:textColor="#535353"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btnInvite"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/icon_2_invite"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="邀请好友"
+                        android:textColor="#535353"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btnPrize"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/icon_2_prize"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="我的奖品"
+                        android:textColor="#535353"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/btnSign"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTop="@mipmap/icon_2_sign"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:text="每日签到"
+                        android:textColor="#535353"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvToolLoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="18dp"
+                android:background="@drawable/selector_pub_bg_white"
+                android:drawableRight="@mipmap/more"
+                android:paddingRight="5dp"
+                android:text="房贷计算器"
+                android:textColor="@color/text_normal"
+                android:textSize="16sp" />
+
+            <include layout="@layout/include_line_hor_left_18" />
+
+            <TextView
+                android:id="@+id/tvToolTaxes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="18dp"
+                android:background="@drawable/selector_pub_bg_white"
+                android:drawableRight="@mipmap/more"
+                android:paddingRight="5dp"
+                android:text="税费计算器"
+                android:textColor="@color/text_normal"
+                android:textSize="16sp" />
+
+            <include layout="@layout/include_line_hor_left_18" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

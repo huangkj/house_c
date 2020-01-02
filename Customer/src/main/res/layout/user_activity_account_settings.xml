@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/btnCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_pub_bg_white"
+                android:gravity="left|center_vertical"
+                android:padding="18dp"
+                android:text="身份认证"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvChecked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/iv1"
+                android:drawablePadding="8dp"
+                android:gravity="left|center_vertical"
+                android:padding="18dp"
+                android:text="未认证"
+
+                android:textColor="@color/text_hint"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/more" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <TextView
+            android:id="@+id/btnMyCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:drawableRight="@mipmap/more"
+            android:gravity="left|center_vertical"
+            android:padding="18dp"
+            android:text="我的银行卡"
+            android:textSize="15sp" />
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <TextView
+            android:id="@+id/btnAccountSafe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:drawableRight="@mipmap/more"
+            android:gravity="left|center_vertical"
+            android:padding="18dp"
+            android:text="账号与安全"
+            android:textSize="15sp" />
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <TextView
+            android:id="@+id/btnAddressManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:drawableRight="@mipmap/more"
+            android:gravity="left|center_vertical"
+            android:padding="18dp"
+            android:text="地址管理"
+            android:textSize="15sp" />
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <TextView
+            android:id="@+id/btnSysSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:drawableRight="@mipmap/more"
+            android:gravity="left|center_vertical"
+            android:padding="18dp"
+            android:text="系统设置"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnExitLogin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pub_title_bar_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/bg_btn_orange_90"
+        android:gravity="center"
+        android:text="退出登录"
+        android:textColor="@color/gradient_end"
+        android:textSize="14sp" />
+</RelativeLayout>

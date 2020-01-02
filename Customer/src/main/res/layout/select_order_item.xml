@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/select_order_item_bg"
+    android:orientation="vertical"
+    android:paddingBottom="22dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/cbSelectOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/cb_select_order_item" />
+
+
+        <TextView
+            android:id="@+id/tvUsernameOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/cbSelectOrder"
+            android:text="客户王哈哈"
+            android:textColor="#ff535353"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/tvPhoneNumberOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:text="134****0880"
+            android:textColor="#ff535353"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/select_order_cut_line"
+        android:layerType="software" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="14dp">
+
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="楼盘信息"
+            android:textColor="#ff7c7c7c"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tvHouseInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:singleLine="true"
+            android:layout_toRightOf="@+id/tv1"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:text="合生霄云路8号(13-302)"
+            android:textColor="#ff535353"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="审核时间"
+            android:textColor="#ff7c7c7c"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tvDateOrderItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="#ff535353"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="应结佣"
+            android:textColor="#ff7c7c7c"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tvShouldBrokerage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="#ff535353"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

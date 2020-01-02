@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GrayLighter"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <com.easylife.house.customer.view.ButtonTouch
+        android:id="@+id/btnReport"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pub_title_bar_height"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/shape_bg_btn_gradient"
+        android:text="再报备"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="visible" />
+</LinearLayout>

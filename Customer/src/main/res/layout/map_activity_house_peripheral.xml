@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_line_hor" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="1dp">
+
+            <RadioButton
+                android:id="@+id/btnBus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/selector_map_icon_bus"
+                android:gravity="center"
+                android:text="公交"
+                android:textColor="@color/text_orange_or_black" />
+
+            <RadioButton
+                android:id="@+id/btnSubway"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/selector_map_icon_subway"
+                android:gravity="center"
+                android:text="地铁"
+                android:textColor="@color/text_orange_or_black" />
+
+            <RadioButton
+                android:id="@+id/btnSchool"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/selector_map_icon_school"
+                android:gravity="center"
+                android:text="学校"
+                android:textColor="@color/text_orange_or_black" />
+
+            <RadioButton
+                android:id="@+id/btnHouse"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/selector_map_icon_house"
+                android:gravity="center"
+                android:text="楼盘"
+                android:textColor="@color/text_orange_or_black" />
+
+            <RadioButton
+                android:id="@+id/btnHospital"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/selector_map_icon_hospital"
+                android:gravity="center"
+                android:text="医院"
+                android:textColor="@color/text_orange_or_black" />
+
+            <RadioButton
+                android:id="@+id/btnBank"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/selector_map_icon_bank"
+                android:gravity="center"
+                android:text="银行"
+                android:textColor="@color/text_orange_or_black" />
+
+            <RadioButton
+                android:id="@+id/btnShop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/selector_map_icon_shop"
+                android:gravity="center"
+                android:text="购物"
+                android:textColor="@color/text_orange_or_black" />
+
+
+        </RadioGroup>
+    </LinearLayout>
+</RelativeLayout>

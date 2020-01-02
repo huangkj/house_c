@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/bg_home_news">
+
+    <RelativeLayout
+        android:id="@+id/relContent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/llNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_toLeftOf="@+id/ivImg"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvTopTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="#房产头条#"
+                android:textColor="#ff535353"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="中央广播电视央"
+                android:textColor="#ff9a9999"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivImg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_hopson" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivSingleImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:visibility="gone" />
+</RelativeLayout>

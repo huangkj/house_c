@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="价格:"
+                    android:layout_gravity="center"
+                    style="@style/FontStyleLightBlackMiddle"/>
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/rb_price"
+                    android:layout_toRightOf="@id/tv_price"
+                    android:layout_marginLeft="10dp"
+                    android:minHeight="20dp"
+                    android:layout_gravity="bottom"
+                    android:rating="3"
+                    android:stepSize="1"
+                    android:progressTint="@color/gradient_end"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                   style="@style/Widget.MaterialRatingBar.RatingBar"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_local"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="地段:"
+                    android:layout_gravity="center"
+                    style="@style/FontStyleLightBlackMiddle"/>
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/rb_local"
+                    android:layout_toRightOf="@id/tv_price"
+                    android:layout_marginLeft="10dp"
+                    android:minHeight="20dp"
+                    android:rating="3"
+                    android:layout_gravity="bottom"
+                    android:stepSize="1"
+                    android:progressTint="@color/gradient_end"
+                    android:secondaryProgressTint="@color/gradient_end"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                   style="@style/Widget.MaterialRatingBar.RatingBar"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_des"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="配套:"
+                    android:layout_gravity="center"
+                    style="@style/FontStyleLightBlackMiddle"/>
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/rb_des"
+                    android:layout_toRightOf="@id/tv_price"
+                    android:layout_marginLeft="10dp"
+                    android:minHeight="20dp"
+                    android:rating="3"
+                    android:layout_gravity="bottom"
+                    android:stepSize="1"
+                    android:progressTint="@color/gradient_end"
+                    android:secondaryProgressTint="@color/gradient_end"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_traffic"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="交通:"
+                    android:layout_gravity="center"
+                    style="@style/FontStyleLightBlackMiddle"/>
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/rb_traffic"
+                    android:layout_toRightOf="@id/tv_price"
+                    android:minHeight="20dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="10dp"
+                    android:stepSize="1"
+                    android:rating="3"
+                    android:progressTint="@color/gradient_end"
+                    android:secondaryProgressTint="@color/gradient_end"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                   style="@style/Widget.MaterialRatingBar.RatingBar"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_env"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="环境:"
+                    android:layout_gravity="center"
+                    style="@style/FontStyleLightBlackMiddle"/>
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/rb_env"
+                    android:layout_toRightOf="@id/tv_price"
+                    android:layout_marginLeft="10dp"
+                    android:minHeight="20dp"
+                    android:stepSize="1"
+                    android:rating="3"
+                    android:progressTint="@color/gradient_end"
+                    android:secondaryProgressTint="@color/gradient_end"
+                    android:layout_gravity="bottom"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                   style="@style/Widget.MaterialRatingBar.RatingBar"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_source"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            style="@style/FontStyleEndBigger"
+            android:text="3.0"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_below="@id/ll_top"
+        android:id="@+id/et_comment_content"
+        android:layout_width="match_parent"
+        android:layout_height="138dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="top"
+        android:padding="10dp"
+        android:maxLength="150"
+        style="@style/FontStyleLightBlackMiddle"
+        android:hint="亲,这个楼盘怎么样？快来说两句!"
+        android:textColorHint="@color/GrayLight"
+        android:background="@drawable/et_gray_line"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@id/et_comment_content"
+        android:id="@+id/recyclerView"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        app:layoutManager="android.support.v7.widget.GridLayoutManager"
+        app:spanCount="4"
+        tools:listitem="@layout/list_item_image"/>
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:text="提交评价"
+        style="@style/FontStyleWhiteSmall"
+        android:background="@drawable/shape_bg_btn_gradient_0"/>
+
+</RelativeLayout>

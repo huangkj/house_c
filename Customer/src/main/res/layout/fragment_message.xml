@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@drawable/shape_bg_btn_gradient_0"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:textSize="16sp"
+        android:text="消息"
+        android:textColor="@color/white" />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swpie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcvMessageList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</LinearLayout>

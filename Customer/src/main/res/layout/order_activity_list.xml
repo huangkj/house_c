@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_gray"
+    android:orientation="vertical">
+
+    <!--<RadioGroup-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:background="@color/white"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/btnAll"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@drawable/selector_bottom_orange"-->
+    <!--android:button="@null"-->
+    <!--android:checked="true"-->
+    <!--android:gravity="center"-->
+    <!--android:text="全部"-->
+    <!--android:textColor="@color/text_orange_or_black"-->
+    <!--android:textSize="14sp" />-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/btnWaitPay"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@drawable/selector_bottom_orange"-->
+    <!--android:button="@null"-->
+    <!--android:gravity="center"-->
+    <!--android:text="已下单"-->
+    <!--android:textColor="@color/text_orange_or_black"-->
+    <!--android:textSize="14sp" />-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/btnHadPay"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@drawable/selector_bottom_orange"-->
+    <!--android:button="@null"-->
+    <!--android:gravity="center"-->
+    <!--android:text="已付款"-->
+    <!--android:textColor="@color/text_orange_or_black"-->
+    <!--android:textSize="14sp" />-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/btnHadSign"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@drawable/selector_bottom_orange"-->
+    <!--android:button="@null"-->
+    <!--android:gravity="center"-->
+    <!--android:text="已签约"-->
+    <!--android:textColor="@color/text_orange_or_black"-->
+    <!--android:textSize="14sp" />-->
+
+    <!--<RadioButton-->
+    <!--android:id="@+id/btnRefund"-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_weight="1"-->
+    <!--android:background="@drawable/selector_bottom_orange"-->
+    <!--android:button="@null"-->
+    <!--android:gravity="center"-->
+    <!--android:text="退款"-->
+    <!--android:textColor="@color/text_orange_or_black"-->
+    <!--android:textSize="14sp" />-->
+    <!--</RadioGroup>-->
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tagLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:tabIndicatorColor="@color/gradient_end"
+        app:tabIndicatorHeight="2dp"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/gradient_end"
+        app:tabTextColor="@color/text_normal" />
+
+    <include layout="@layout/include_line_hor" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/layContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

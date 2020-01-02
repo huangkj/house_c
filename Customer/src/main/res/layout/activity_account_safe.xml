@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f8f8f8"
+    android:orientation="vertical"
+    tools:context=".ui.mine.accountsafe.AccountSafeActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relTradePswAccountSafe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="16dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="交易密码"
+            android:textColor="#ff535353"
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/pub_ic_arrow_right" />
+
+    </RelativeLayout>
+
+
+    <include
+        layout="@layout/cut_line_h"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/relchangePswAccountSafe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="16dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="修改登录密码"
+            android:textColor="#ff535353"
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/pub_ic_arrow_right" />
+
+    </RelativeLayout>
+
+
+    <include
+        layout="@layout/cut_line_h"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/relMobileNumberAccountSafe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="16dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号"
+            android:textColor="#ff535353"
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:id="@+id/ivMobileNumberAccountSafe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/pub_ic_arrow_right" />
+
+        <TextView
+            android:id="@+id/tvMobileNumberAccountSafe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="9dp"
+            android:layout_toLeftOf="@+id/ivMobileNumberAccountSafe"
+            android:hint="未绑定"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+
+    <include
+        layout="@layout/cut_line_h"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/relWechatAccountSafe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="16dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微信号"
+            android:textColor="#ff535353"
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:id="@+id/ivWechatAccountSafe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/pub_ic_arrow_right" />
+
+        <TextView
+            android:id="@+id/tvWechatAccountSafe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="9dp"
+            android:layout_toLeftOf="@+id/ivWechatAccountSafe"
+            android:hint="未绑定"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+
+    <include
+        layout="@layout/cut_line_h"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/relQQAccountSafe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingTop="16dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QQ号"
+            android:textColor="#ff535353"
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:id="@+id/ivQQAccountSafe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/pub_ic_arrow_right" />
+
+        <TextView
+            android:id="@+id/tvQQAccountSafe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="9dp"
+            android:layout_toLeftOf="@+id/ivQQAccountSafe"
+            android:hint="未绑定"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+
+    <include
+        layout="@layout/cut_line_h"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="20dp" />
+</LinearLayout>

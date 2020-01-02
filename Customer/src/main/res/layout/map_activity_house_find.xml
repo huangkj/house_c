@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.easylife.house.customer.view.PathView
+        android:id="@+id/pathView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/viewPathBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_pathview_bg"
+        android:visibility="gone" />
+
+    <com.easylife.house.customer.view.ImageViewTouch
+        android:id="@+id/btnLocate"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/map_location" />
+
+    <com.easylife.house.customer.view.ImageViewTouch
+        android:id="@+id/btnDrawable"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="20dp"
+        android:src="@mipmap/map_find_drawable_n" />
+
+    <com.easylife.house.customer.view.ButtonTouch
+        android:id="@+id/btnFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/shape_bg_btn_white_90"
+        android:drawableRight="@mipmap/map_filter"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:text="筛选"
+        android:textColor="@color/text_normal"
+        android:textSize="14sp" />
+
+</RelativeLayout>

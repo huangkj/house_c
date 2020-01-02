@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f8f8f8"
+    tools:context=".ui.mine.brokerage.MyBrokerageActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/_f8f8f8">
+
+
+        <RelativeLayout
+            android:id="@+id/relBrokerage"
+            android:layout_width="match_parent"
+            android:layout_height="351dp"
+            android:background="@mipmap/iv_my_brokerage_bg">
+
+
+            <TextView
+                android:id="@+id/tvShouldBrokerageTx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="应结佣（元）"
+                android:textColor="#ffffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvShouldBrokerage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvShouldBrokerageTx"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="0"
+                android:textColor="#ffffffff"
+                android:textSize="30sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvShouldBrokerage"
+                android:layout_marginTop="33dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="预计结佣（元）"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvPredictBrokerage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="0"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="待结佣（元）"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvWaitBrokerage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="0"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="应扣税费（元）"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvShouldTax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="0"
+                        android:textColor="#ffffffff"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:paddingBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relBrokerage"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="-150dp"
+            android:background="@drawable/my_brokerage_rule_bg"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="佣金说明"
+                android:textColor="#ff535353"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/brokerage_rule"
+                android:textColor="#ff535353"
+                android:textSize="14sp" />
+
+
+            <com.easylife.house.customer.view.ButtonTouch
+                android:id="@+id/btnConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pub_title_bar_height"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_bg_btn_gradient"
+                android:text="申请结佣"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

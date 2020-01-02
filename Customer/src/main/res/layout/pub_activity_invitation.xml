@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="50dp"
+        android:text="您的邀请码"
+        android:textColor="@color/_444345"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/edInvitationCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColorLink="@color/gradient_end" />
+
+    <include layout="@layout/include_line_hor" />
+
+    <com.easylife.house.customer.view.ButtonTouch
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pub_title_bar_height"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginRight="18dp"
+        android:background="@drawable/shape_bg_btn_gradient"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</LinearLayout>

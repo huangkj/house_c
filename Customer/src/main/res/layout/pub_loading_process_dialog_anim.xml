@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal" android:layout_width="wrap_content"
+	android:layout_height="wrap_content" android:gravity="center">
+
+	<ProgressBar android:id="@+id/loading_process_dialog_progressBar"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:indeterminate="false" android:indeterminateDrawable="@anim/loadinganim" />
+	
+		<TextView android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="@string/loading" />
+	
+	<ProgressBar 
+	    android:layout_width="wrap_content"
+	    
+	    />
+	<ImageView
+	    android:id="@+id/loading_process_dialog_imageview"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@anim/loadinganim" />
+
+</LinearLayout>
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00000000">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvProgress"
+        android:background="@color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

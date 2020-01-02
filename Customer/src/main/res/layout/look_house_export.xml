@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_export"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_export_shop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <com.easylife.house.customer.view.photoview.RoundedImageView
+                android:id="@+id/team_head"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@mipmap/default_head"
+                app:corner="90dp" />
+
+            <TextView
+                android:id="@+id/team_name"
+                style="@style/FontStyleLightBlackSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/team_head"
+                android:ellipsize="end"
+                android:lines="1"
+                android:maxWidth="80dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/team_good"
+                style="@style/FontStyleGraySmaller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/team_name"
+                android:text="好评率:"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/team_good_value"
+                style="@style/FontStyleLightBlackSmaller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/team_good"
+                android:text="0%"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/team_look"
+                style="@style/FontStyleGraySmaller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/team_good_value"
+                android:text="近30天带看:"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/team_look_value"
+                style="@style/FontStyleLightBlackSmaller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/team_look"
+                android:text="0次"
+                android:textSize="10dp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/team_phone"
+            style="@style/FontStyleEndSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/rl_export_shop"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@mipmap/phone"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="电话" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="40dp"
+            android:layout_alignTop="@id/rl_export_shop"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/team_phone"
+            android:background="@color/gray_line" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:visibility="gone">
+
+        <com.easylife.house.customer.view.photoview.RoundedImageView
+            android:id="@+id/team_no"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:src="@mipmap/default_head"
+            app:corner="90dp" />
+
+        <TextView
+            style="@style/FontStyleGrayMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/team_no"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="正在为您分配好生活经纪人..." />
+
+        <TextView
+            android:id="@+id/tv_cancle"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/line2"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/comment_flow_text_bg_red"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="取消预约"
+            android:textColor="@color/_2526157"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

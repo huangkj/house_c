@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:text="您的购房城市:"
+            android:textColor="@color/text_normal"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvCity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_pub_bg_white"
+            android:drawablePadding="10dp"
+            android:drawableRight="@mipmap/more"
+            android:gravity="center_vertical|right"
+            android:hint="请选择"
+            android:paddingRight="18dp"
+            android:textColor="@color/text_normal"
+            android:textColorHint="@color/text_hint"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <include layout="@layout/include_line_hor_left_18" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:text="您的购房预算:"
+            android:textColor="@color/text_normal"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvBudget"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_pub_bg_white"
+            android:drawablePadding="10dp"
+            android:drawableRight="@mipmap/more"
+            android:gravity="center_vertical|right"
+            android:hint="请选择"
+            android:paddingRight="18dp"
+            android:textColor="@color/text_normal"
+            android:textColorHint="@color/text_hint"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <include layout="@layout/include_line_hor_left_18" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:text="是否考虑贷款:"
+            android:textColor="@color/text_normal"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvLoan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_pub_bg_white"
+            android:drawablePadding="10dp"
+            android:drawableRight="@mipmap/more"
+            android:gravity="center_vertical|right"
+            android:hint="不限"
+            android:paddingRight="18dp"
+            android:textColor="@color/text_normal"
+            android:textColorHint="@color/text_hint"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <include layout="@layout/include_line_hor_left_18" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:text="您的居室需求:"
+            android:textColor="@color/text_normal"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvStructure"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_pub_bg_white"
+            android:drawablePadding="10dp"
+            android:drawableRight="@mipmap/more"
+            android:gravity="center_vertical|right"
+            android:hint="不限"
+            android:paddingRight="18dp"
+            android:textColor="@color/text_normal"
+            android:textColorHint="@color/text_hint"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <include layout="@layout/include_line_hor_left_18" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:text="您是否有意向楼盘:"
+        android:textColor="@color/text_normal"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/edIntentDev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:maxLength="50"
+        android:textColor="@color/text_normal"
+        android:textSize="14sp" />
+
+    <include layout="@layout/include_line_hor_left_18" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="10dp"
+        android:text="*好生活讲提供专业的职业顾问帮您选房，并实时获得买房优惠信息"
+        android:textColor="@color/text_hint"
+        android:textSize="12sp" />
+
+    <com.easylife.house.customer.view.ButtonTouch
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pub_title_bar_height"
+        android:layout_margin="18dp"
+        android:background="@drawable/shape_bg_btn_gradient"
+        android:text="确认提交"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="18dp"
+    android:paddingTop="20dp"
+    android:paddingRight="18dp"
+    android:paddingBottom="20dp">
+
+    <ImageView
+        android:id="@+id/imgCaseImage"
+        android:layout_width="140dp"
+        android:layout_height="90dp"
+        android:layout_marginRight="18dp"
+        android:scaleType="centerCrop"
+        android:src="@color/gray_title" />
+
+    <TextView
+        android:id="@+id/tvCaseTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgCaseImage"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="装修案例标题"
+        android:textColor="@color/gray_title"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvCaseContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCaseTitle"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/imgCaseImage"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="装修案例内容"
+        android:textColor="@color/gray_desc_1"
+        android:textSize="12sp" />
+</RelativeLayout>

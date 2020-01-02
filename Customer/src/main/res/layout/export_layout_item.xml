@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="20dp"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rl_export"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.easylife.house.customer.view.photoview.RoundedImageView
+            android:id="@+id/iv_head"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:src="@mipmap/default_head"
+            app:corner="90dp"/>
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_head"
+            android:layout_marginLeft="10dp"
+            android:text="---"
+            android:lines="1"
+            android:maxEms="5"
+            android:ellipsize="end"
+            android:textSize="@dimen/sp_14"
+            style="@style/FontStyleLightBlackBig" />
+
+        <LinearLayout
+            android:id="@+id/ll_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/team_phone"
+                android:layout_width="wrap_content"
+                android:padding="15dp"
+                android:layout_toLeftOf="@id/line"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawableLeft="@mipmap/phone" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/gray_line"/>
+
+            <ImageView
+                android:id="@+id/iv_team_chat"
+                android:layout_width="40dp"
+                android:padding="13dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                style="@style/FontStyleEndSmall"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/send_im"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_store"
+            android:layout_toRightOf="@id/tv_username"
+            android:layout_marginRight="10dp"
+            style="@style/FontStyleLightBlackSmaller"
+            android:layout_alignTop="@id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="店铺等级"/>
+
+
+        <RatingBar
+            android:id="@+id/rb_star"
+            android:layout_toRightOf="@id/tv_store"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_alignTop="@id/tv_username"
+            style="?android:attr/ratingBarStyleSmall"
+            android:stepSize="0.1"
+            android:progressTint="@color/gradient_end"/>
+
+
+        <com.easylife.house.customer.view.FlowViewGroup
+            android:id="@+id/export_flowgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_username"
+            android:layout_alignLeft="@id/tv_username"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="-5dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/gray_f8"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/FontStyleGraySmaller"
+            android:text="好评率:"/>
+
+        <TextView
+            android:id="@+id/tv_good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            style="@style/FontStyleLightBlackSmaller"
+            android:text="0%"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            style="@style/FontStyleGraySmaller"
+            android:text="近30天带看:"/>
+
+        <TextView
+            android:id="@+id/tv_look"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            style="@style/FontStyleLightBlackSmaller"
+            android:text="0次"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

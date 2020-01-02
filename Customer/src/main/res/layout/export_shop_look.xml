@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="15dp">
+
+    <TextView
+        android:id="@+id/tv_history_value"
+        style="@style/FontStyleEndBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="15dp"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/tv_history"
+        style="@style/FontStyleGraySmaller66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_history_value"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="6dp"
+        android:text="历史成绩(套)" />
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="0.5dp"
+        android:layout_height="34dp"
+        android:layout_alignBottom="@id/tv_history"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@id/tv_history"
+        android:background="@color/gray_line" />
+
+
+    <TextView
+        android:id="@+id/tv_avg_value"
+        style="@style/FontStyleEndBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/line3"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/tv_avg"
+        style="@style/FontStyleGraySmaller66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_history_value"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@id/line3"
+        android:text="平均成绩周期(天)" />
+
+    <View
+        android:id="@+id/line4"
+        android:layout_width="0.5dp"
+        android:layout_height="34dp"
+        android:layout_alignBottom="@id/tv_history"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_toRightOf="@id/tv_avg"
+        android:background="@color/gray_line" />
+
+
+    <TextView
+        android:id="@+id/tv_look_value"
+        style="@style/FontStyleEndBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@id/line4"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/tv_look"
+        style="@style/FontStyleGraySmaller66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_history_value"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@id/line4"
+        android:text="近30天带看(次)" />
+
+</RelativeLayout>

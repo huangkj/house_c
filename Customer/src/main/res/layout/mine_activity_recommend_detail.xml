@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/GrayLighter"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="15dp"
+        android:textColor="@color/text_black"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btnRecommendRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="14dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="14dp"
+            android:text="推荐进度"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDevName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_dev"
+                android:drawablePadding="5dp"
+                android:ellipsize="end"
+                android:maxEms="12"
+                android:maxLines="1"
+                android:paddingLeft="20dp"
+                android:paddingTop="14dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="14dp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tvCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@mipmap/icon_call_orange"
+                android:drawablePadding="2dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="14dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="14dp"
+                android:text="项目助理"
+                android:textColor="@color/text_black"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <com.easylife.house.customer.view.ButtonTouch
+        android:id="@+id/btnReport"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pub_title_bar_height"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/shape_bg_btn_gradient"
+        android:text="再报备"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</LinearLayout>

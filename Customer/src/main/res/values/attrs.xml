@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RangeSeekBar">
+        <attr name="max" format="float"/>
+        <attr name="min" format="float"/>
+        <attr name="reserve" format="float"/>
+        <attr name="cells" format="integer"/>
+        <attr name="lineColorSelected" format="color"/>
+        <attr name="lineColorEdge" format="color"/>
+        <attr name="seekBarResId" format="reference"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="PasswordView">
+        <attr name="passwordLength" format="integer" />
+        <attr name="passwordPadding" format="dimension" />
+        <attr name="borderColor" format="color" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="cursorFlashTime" format="integer" />
+        <attr name="isCursorEnable" format="boolean" />
+        <attr name="cipherEnable" format="boolean" />
+        <attr name="cursorColor" format="color" />
+        <attr name="mode" format="enum">
+            <enum name="underline" value="0" />
+            <enum name="rect" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!--pdf文件预览-->
+    <declare-styleable name="PDFViewPager">
+        <attr name="assetFileName" format="string" /> <!-- Load PDF from Asset -->
+        <attr name="pdfUrl" format="string" /> <!-- Load PDF from remote URL -->
+        <attr name="scale" format="float" /> <!-- Set initial scale for PDF -->
+    </declare-styleable>
+</resources>

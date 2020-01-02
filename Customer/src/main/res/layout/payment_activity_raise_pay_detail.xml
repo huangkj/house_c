@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/raBtnRaise"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bottom_orange"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="认筹支付明细"
+            android:textColor="@color/text_orange_or_black" />
+
+        <RadioButton
+            android:id="@+id/raBtnPurchase"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bottom_orange"
+            android:button="@null"
+            android:gravity="center"
+            android:text="认购支付明细" />
+    </RadioGroup>
+
+    <include layout="@layout/include_line_hor" />
+
+    <include layout="@layout/include_order_info" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

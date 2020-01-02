@@ -1,0 +1,190 @@
+package com.easylife.house.customer.view.anchor;
+
+import android.content.Context;
+import android.os.Handler;
+import android.os.Message;
+import android.support.design.widget.TabLayout;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+
+import java.util.List;
+
+
+public class Anchor implements TabLayout.OnTabSelectedListener, ObservableScrollView.ScrollViewListener, View.OnTouchListener {
+
+    private OnScrollListener mOnScrollListener;
+
+    public interface OnScrollListener {
+        void onScroll(ObservableScrollView scrollView, int x, int y, int oldx, int oldy);
+    }
+
+    public void setOnScrollListener(OnScrollListener l) {
+        mOnScrollListener = l;
+    }
+
+
+    /**
+     * 内部的tab
+     */
+    /**
+     * 外部的tab
+     */
+    private TabLayout mOutside_tab;
+
+    private ObservableScrollView mScrollView;
+    /**
+     * 锚点集合
+     */
+    private List<View> mAimingPointList;
+
+    private Context mContext;
+    /**
+     * ScrollView 的滑动状态
+     */
+    private int state = MotionEvent.ACTION_UP;
+
+    /**
+     * scrollview 是否在滑动
+     */
+    private boolean isScrolling = false;
+    /**
+     * 覆盖的高度(顶部预留的高度 包括TabLayout 以及自定义的头部)
+     */
+    private float mCoverHeight;
+    private float mTabHeight;
+
+    boolean forceScroll = false;//手动滚动标识 避免点击Tab时 scrollTo 导致循环改变Tab选择的问题
+
+    /**
+     * @param inside_tab      内部Tab
+     * @param outside_tab     外部Tab
+     * @param scrollView      scrollView
+     * @param aimingPointList 定位的锚点集合
+     * @param coverHeight     覆盖在scrollView上面的 布局总高度dp值
+     */
+    public Anchor(TabLayout outside_tab, ObservableScrollView scrollView, List<View> aimingPointList,
+                  Context context, float coverHeight, float mTabHeight) {
+        this.mOutside_tab = outside_tab;
+        this.mScrollView = scrollView;
+        this.mAimingPointList = aimingPointList;
+        this.mContext = context;
+        this.mCoverHeight = TabLayoutUtil.dip2px(mContext, coverHeight);
+        this.mTabHeight = TabLayoutUtil.dip2px(mContext, mTabHeight);
+
+        mOutside_tab.addOnTabSelectedListener(this);
+//        mInside_tab.setOnTabSelectedListener(this);
+        mScrollView.setScrollViewListener(this);
+        mScrollView.setOnTouchListener(this);
+
+        mOutside_tab.post(new Runnable() {
+            @Override
+            public void run() {
+                TabLayoutUtil.setIndicator(mContext, mOutside_tab);
+            }
+        });
+//        mInside_tab.post(new Runnable() {
+//            @Override
+//            public void run() {
+//                TabLayoutUtil.setIndicator(mContext, mInside_tab);
+//            }
+//        });
+
+
+    }
+
+    @Override
+    public void onTabSelected(TabLayout.Tab tab) {
+        int position = tab.getPosition();
+//        mOutside_tab.getTabAt(position).select();
+//        mInside_tab.getTabAt(position).select();
+        //mOutside_tab.setVisibility(View.VISIBLE);
+
+        //避免滚动的过程中点击tab
+        if (state == MotionEvent.ACTION_UP && !isScrolling) { //防止滑动时 重复调用
+            forceScroll = true;
+            int scrollDestination = mAimingPointList.get(position).getTop() - (int) (mCoverHeight + mTabHeight);
+            scrollDestination += 4;//修复计算精度丢失的误差
+            mScrollView.scrollTo(0, scrollDestination);
+        }
+
+    }
+
+
+    @Override
+    public void onTabUnselected(TabLayout.Tab tab) {
+    }
+
+    @Override
+    public void onTabReselected(TabLayout.Tab tab) {
+    }
+
+    private Handler mHandler = new Handler() {
+
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case 1:
+                    isScrolling = false;
+                    break;
+            }
+        }
+    };
+
+
+    @Override
+    public void onScrollChanged(ObservableScrollView scrollView, int x, int y, int oldx, int oldy) {
+        if (mOnScrollListener != null) {
+            mOnScrollListener.onScroll(scrollView, x, y, oldx, oldy);
+        }
+
+        /**已经滑动的距离*/
+        int scorlly = mScrollView.getScrollY();
+        /**导航控制*/
+//        if (scorlly >= mInside_tab.getTop() || mInside_tab.getTop() - scorlly <= mCoverHeight) {
+//            mOutside_tab.setVisibility(View.VISIBLE);
+//        } else {
+//            mOutside_tab.setVisibility(View.GONE);
+//        }
+
+
+        //每次回调onScrollChanged 时 清除handler发出的所有messages  如果能收到消息，表明滑动停止了
+        isScrolling = true;
+        mHandler.removeCallbacksAndMessages(null);
+        //延迟发送一个消息
+        mHandler.sendEmptyMessageDelayed(1, 200);
+
+        /**遍历锚点从最下面瞄点开始遍历,如果已经滑动的Y距离+tab layout高度大于锚点的top选中，选中该tab */
+        if (!forceScroll) {
+            for (int j = 0; j < mAimingPointList.size(); j++) {
+                int index = mAimingPointList.size() - j - 1;
+                int top = mAimingPointList.get(index).getTop();
+                if (scorlly + mCoverHeight + mTabHeight >= top) {
+//                    mInside_tab.getTabAt(index).select();
+                    int selectedTabPosition = mOutside_tab.getSelectedTabPosition();
+                    if (selectedTabPosition != index) {
+                        mOutside_tab.getTabAt(index).select();
+                    }
+                    return;
+                }
+
+            }
+        } else {
+            forceScroll = false;
+        }
+
+
+    }
+
+    /**
+     * 当前的触摸状态
+     */
+    @Override
+    public boolean onTouch(View view, MotionEvent motionEvent) {
+        state = motionEvent.getAction();
+        return false;
+    }
+
+
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_person"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:background="@color/gray_f8">
+
+    <TextView
+        android:id="@+id/tv_room_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2室2厅1卫"
+        style="@style/FontStyleBlackSmall"
+        android:layout_toRightOf="@id/iv_img"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_area_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FontStyleBlackSmall"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text="97.4㎡"/>
+
+    <TextView
+        android:id="@+id/tv_price_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FontStyleBlackSmall"
+        android:layout_below="@id/tv_area_person"
+        android:layout_alignLeft="@id/tv_room_person"
+        android:layout_marginTop="15dp"
+        android:text="560.3万元/套"/>
+
+    <View
+        android:id="@+id/line_person"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/_e7e7e7"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tv_price_person"/>
+
+    <Button
+        android:id="@+id/btn_more"
+        android:visibility="gone"
+        android:layout_width="121dp"
+        android:layout_height="38dp"
+        android:layout_below="@id/line_person"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/orange_whilte_rect_line_bg"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        style="@style/FontStyleEndSmall"
+        android:text="查看更多房源"/>
+
+</RelativeLayout>

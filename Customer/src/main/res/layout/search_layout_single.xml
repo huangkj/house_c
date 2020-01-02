@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/title_bg"
+    android:orientation="horizontal"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/iv_back_search"
+        android:layout_width="12.5dp"
+        android:layout_height="19dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="2dp"
+        android:layout_marginLeft="10dp"
+        android:paddingRight="4.5dp"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/back_black"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_toRightOf="@id/iv_back_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_centerVertical="true"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_single_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="买在哪里·预算多少·家的大小"
+            android:textColor="#737373"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

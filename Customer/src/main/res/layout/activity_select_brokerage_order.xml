@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_f8f8f8">
+
+
+    <LinearLayout
+        android:id="@+id/llSortContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/llDefaultSort"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/tvArea"
+                style="@style/FontStyleGrayBlack5d14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="默认排序" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llHousePrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/tvHousePrice"
+                style="@style/FontStyleGrayBlack5d14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="审核时间" />
+
+            <ImageView
+                android:id="@+id/ivHousePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:src="@mipmap/iv_order_default" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAcreage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/tvAcreage"
+                style="@style/FontStyleGrayBlack5d14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="楼盘筛选" />
+
+            <ImageView
+                android:id="@+id/ivAcreage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:src="@mipmap/ic_triangle" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcvSelectBrokerage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="19dp"
+        android:background="@color/_f7f7f7"
+        app:layout_constraintBottom_toTopOf="@+id/relConfirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llSortContent" />
+
+
+    <RelativeLayout
+        android:id="@+id/relConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <CheckBox
+            android:id="@+id/cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/cb_select"
+            android:drawablePadding="6dp"
+            android:text="全选"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tvPriceConfirmOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/tvOrderConfirmOrder"
+            android:text="合计:￥0.00"
+            android:textColor="#ff535353"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:id="@+id/tvOrderConfirmOrder"
+            android:layout_width="118dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/brokerage_confirm_bg"
+            android:gravity="center"
+            android:text="确定(0)"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

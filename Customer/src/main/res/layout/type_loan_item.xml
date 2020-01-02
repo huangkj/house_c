@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/houses_type_item"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:background="@color/white"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/tv_bussiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#ff333333"
+        android:textSize="20sp"
+        android:text="商贷参考"/>
+
+    <TextView
+        android:paddingBottom="1dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:id="@+id/tv_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_yellow_daikuan"
+        android:textColor="#ffff9900"
+        android:textSize="13sp"
+        android:text="贷款利率4.9%"
+        android:layout_toRightOf="@+id/tv_bussiness"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp" />
+
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/bg_daikuan_detail"
+        android:layout_below="@id/tv_bussiness"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/ll"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_total"
+            style="@style/FontStyleEndBig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="---" />
+
+        <TextView
+            android:id="@+id/tv_total_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_total"
+            android:layout_marginTop="8dp"
+            android:text="首付金额(元)"
+            android:textColor="#ff797979"
+            android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="1px"
+            android:layout_height="37dp"
+            android:layout_toRightOf="@+id/ll"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@color/_165165165"/>
+
+        <LinearLayout
+            android:layout_toRightOf="@id/line2"
+            android:layout_marginLeft="25dp"
+            android:id="@+id/ll_money_month"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_money_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textColor="@color/_666565"
+            android:text="---"/>
+
+        <TextView
+            android:id="@+id/tv_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_money_month"
+            android:layout_alignLeft="@id/tv_money_month"
+            android:textColor="@color/_134134134"
+            android:textSize="12sp"
+            android:text="每月还款(元)" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginLeft="30dp"
+            android:layout_alignTop="@id/ll_money_month"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/ll_money_month"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_first_rate_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/_666565"
+                android:text="3成"/>
+
+            <TextView
+                android:id="@+id/tv_first_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@id/tv_first_rate_value"
+                android:gravity="right"
+                android:layout_below="@id/tv_first_rate_value"
+                android:textColor="@color/_134134134"
+                android:textSize="12sp"
+                android:text="首付比例"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_loan_total"
+            android:layout_below="@id/ll_money_month"
+            android:layout_alignLeft="@id/ll_money_month"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="14dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_loan_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="@color/_666565"
+                android:text="---"/>
+
+            <TextView
+                android:id="@+id/tv_loan"
+                android:layout_below="@id/tv_loan_total"
+                android:layout_alignLeft="@id/tv_loan_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/_134134134"
+                android:textSize="12sp"
+                android:text="贷款总额(元)" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/ll_money_month"
+            android:layout_alignTop="@id/ll_loan_total"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_loan_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="right"
+                android:textColor="@color/_666565"
+                android:text="30年"/>
+
+            <TextView
+                android:layout_alignRight="@id/tv_loan_year"
+                android:layout_below="@id/tv_loan_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/_134134134"
+                android:textSize="12sp"
+                android:gravity="right"
+                android:text="贷款年限"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

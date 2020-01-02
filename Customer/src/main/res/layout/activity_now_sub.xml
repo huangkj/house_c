@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_top"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:scaleType="fitXY"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_top"
+            android:layout_below="@id/iv_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/tv_houses_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/FontStyleLightBlackBig"
+                android:maxLength="12"
+                android:ellipsize="end"
+                android:lines="1"/>
+
+            <TextView
+                android:id="@+id/tv_people"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0人"
+                android:layout_toRightOf="@id/tv_houses_name"
+                android:layout_marginLeft="30dp"
+                style="@style/FontStyleEndSmall"/>
+
+            <TextView
+                android:id="@+id/tv_people_name"
+                android:layout_toRightOf="@id/tv_people"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已订阅"
+                android:textSize="14sp"
+                android:textColor="#868686"/>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="姓名:"
+                android:layout_below="@id/tv_houses_name"
+                android:layout_marginTop="20dp"
+                android:textColor="#868686"/>
+
+            <com.easylife.house.customer.view.LineEditText
+                android:id="@+id/et_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_name"
+                android:layout_toRightOf="@id/tv_name"
+                android:layout_marginLeft="10dp"
+                android:lines="1"
+                android:ems="5"
+                android:ellipsize="end"
+                android:background="@null"
+                android:textSize="12sp"
+                android:textColorHint="@color/_666565"
+                android:layout_marginBottom="2dp"
+                android:textColor="@color/_666565"/>
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_marginTop="10dp"
+                android:text="手机号:"/>
+
+            <com.easylife.house.customer.view.LineEditText
+                android:id="@+id/et_phone"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_phone"
+                android:layout_toRightOf="@id/tv_phone"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:textSize="12sp"
+                android:inputType="number"
+                android:layout_marginBottom="2dp"
+                android:textColor="@color/_666565"/>
+
+            <TextView
+                android:id="@+id/tv_smscode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_phone"
+                android:layout_marginTop="10dp"
+                android:text="验证码:"/>
+
+            <com.easylife.house.customer.view.LineEditText
+                android:id="@+id/et_smscode"
+                android:layout_width="71dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/tv_smscode"
+                android:layout_toRightOf="@id/tv_smscode"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:textSize="12sp"
+                android:inputType="number"
+                android:layout_marginBottom="2dp"
+                android:textColor="@color/_666565"/>
+
+            <TextView
+                android:id="@+id/tv_get_sms"
+                android:layout_toRightOf="@id/et_smscode"
+                android:layout_alignBottom="@id/et_smscode"
+                android:layout_marginLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gradient_end"
+                android:textSize="12sp"
+                android:text="获取验证码"/>
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:id="@+id/tv_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="订阅服务:"/>
+
+        <com.easylife.house.customer.view.FlowViewGroup
+            android:id="@+id/floviewgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_sub"/>
+
+        <!--<TextView
+            android:id="@+id/tv_alert"
+            android:layout_width="96dp"
+            android:layout_height="38dp"
+            android:text="价格变动"
+            style="@style/FontStyleEndSmall"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/house_bg_line"
+            android:layout_toRightOf="@id/tv_sub"/>
+
+
+        <TextView
+            android:id="@+id/tv_open"
+            android:layout_width="96dp"
+            android:layout_height="38dp"
+            android:text="开盘通知"
+            style="@style/FontStyleEndSmall"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/house_bg_line"
+            android:layout_toRightOf="@id/tv_alert"/>
+
+
+        <TextView
+            android:id="@+id/tv_dynamic"
+            android:layout_width="96dp"
+            android:layout_height="38dp"
+            android:text="动态"
+            style="@style/FontStyleEndSmall"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/house_bg_line"
+            android:layout_alignLeft="@id/tv_alert"
+            android:layout_below="@id/tv_alert"/>-->
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/btn_sub"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="免费订阅"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        style="@style/FontStyleWhiteSmaller"
+        android:background="@color/gradient_end"/>
+
+    <TextView
+        android:layout_above="@id/btn_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="35dp"
+        android:text="* 请放心填写，个人信息不会泄露"/>
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/reason_dialog_bg"
+    android:paddingRight="10dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="审核意见"
+        android:textColor="#ff383d39"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@mipmap/icon_close_dialog" />
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginTop="14dp" />
+
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="20dp"
+        android:lineSpacingExtra="4dp"
+        android:minHeight="90dp"
+        android:text="你说不行就不行？凭啥你说不行就不行？你是黄晓明？你说不行就不行？凭啥你说不行就不行？你是黄晓明？你说不行就不行？凭啥你说不"
+        android:textColor="#ff5d5d5d"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvContent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/tv_confirm_bg"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="确定"
+        android:textColor="#ffffffff"
+        android:textSize="16sp" />
+
+</RelativeLayout>

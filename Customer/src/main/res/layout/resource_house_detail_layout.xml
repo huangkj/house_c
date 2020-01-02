@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingTop="12dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="12dp">
+
+    <TextView
+        android:id="@+id/tvDetailTx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="详细信息"
+        android:textColor="#ff333333"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6">
+
+            <TextView
+                android:id="@+id/tvHouseTowardTx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="朝向："
+                android:textColor="#ff8b8b8b"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvHouseToward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tvHouseTowardTx"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="#ff484848"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvHouseUnitNameTx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHouseTowardTx"
+                android:layout_marginTop="10dp"
+                android:text="单元："
+                android:textColor="#ff8b8b8b"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvHouseUnitName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvHouseUnitNameTx"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tvHouseTowardTx"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="#ff484848"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:id="@+id/tvHouseAreaBuildTx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHouseUnitNameTx"
+                android:layout_marginTop="10dp"
+                android:text="建筑面积："
+                android:textColor="#ff8b8b8b"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvHouseAreaBuild"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvHouseAreaBuildTx"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tvHouseAreaBuildTx"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="#ff484848"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:id="@+id/tvHouseResourceLocateTx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHouseAreaBuildTx"
+                android:layout_marginTop="10dp"
+                android:text="位置："
+                android:textColor="#ff8b8b8b"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvHouseResourceLocate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvHouseResourceLocateTx"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tvHouseResourceLocateTx"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="#ff484848"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4">
+
+
+            <TextView
+                android:id="@+id/tvHouseBuildNameTx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="楼栋："
+                android:textColor="#ff8b8b8b"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvHouseBuildName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tvHouseBuildNameTx"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="#ff484848"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:id="@+id/tvHouseFloorTx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHouseBuildNameTx"
+                android:layout_marginTop="10dp"
+                android:text="楼层："
+                android:textColor="#ff8b8b8b"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvHouseFloor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvHouseFloorTx"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tvHouseFloorTx"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="#ff484848"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:id="@+id/tvHouseAreaRealTx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHouseFloorTx"
+                android:layout_marginTop="10dp"
+                android:text="套内面积："
+                android:textColor="#ff8b8b8b"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvHouseAreaReal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvHouseAreaRealTx"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tvHouseAreaRealTx"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="#ff484848"
+                android:textSize="13sp" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

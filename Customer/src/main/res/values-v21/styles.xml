@@ -1,0 +1,21 @@
+<resources>
+
+  <!--  &lt;!&ndash; inherit from the material theme，版本最低21 &ndash;&gt;
+    <style name="AppTheme" parent="android:Theme.Material">
+        &lt;!&ndash;标题栏颜色&ndash;&gt;
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        &lt;!&ndash;状态栏颜色&ndash;&gt;
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        &lt;!&ndash;<item name="android:statusBarColor">@color/colorPrimaryDark</item>&ndash;&gt;
+        <item name="android:colorAccent">@color/colorAccent</item>
+        &lt;!&ndash;导航栏颜色&ndash;&gt;
+        <item name="android:navigationBarColor">@color/colorAccent</item>
+    </style>
+-->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.mine.integral.IntegralActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginBottom="21dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="21dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@mipmap/bg_integral" />
+
+        <TextView
+            android:layout_width="56dp"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="总积分"
+            android:textColor="#ffffffff"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/tvIntegralValue"
+            android:layout_width="125dp"
+            android:layout_height="56dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/tvFailureDateIntegral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:drawableLeft="@mipmap/icon_notice"
+            android:drawablePadding="6dp"
+            android:text="0积分 有效期至xxxx 年xx月xx日"
+            android:textColor="#70ffffff"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relListContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcvIntegral"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.easylife.house.customer.view.stickyitemdecoration.StickyHeadContainer
+            android:id="@+id/shc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/integral_head" />
+
+        </com.easylife.house.customer.view.stickyitemdecoration.StickyHeadContainer>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

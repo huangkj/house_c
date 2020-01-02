@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_detail_more"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tv_houses_name"
+        style="@style/FontStyleBlackBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:maxLength="12"
+        android:text="-----" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        style="@style/FontStyleEndSmaller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_houses_name"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/tv_houses_name"
+        android:background="@drawable/orange_end_rect_line_bg"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:text="----"
+        android:textSize="8dp" />
+
+    <TextView
+        android:id="@+id/tv_price"
+        style="@style/FontStyleEndBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_houses_name"
+        android:layout_marginTop="10dp"
+        android:text="-----"
+        android:textStyle="bold" />
+
+    <com.easylife.house.customer.view.FlowViewGroup
+        android:id="@+id/floviewgroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_price"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="-5dp" />
+
+    <TextView
+        android:id="@+id/tv_address"
+        style="@style/FontStyleGrayMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/floviewgroup"
+        android:layout_marginTop="20dp"
+        android:text="地址:" />
+
+    <ImageView
+        android:id="@+id/iv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@id/tv_address"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:src="@mipmap/location" />
+
+    <TextView
+        android:id="@+id/tv_address_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_address"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@id/iv_address"
+        android:layout_toRightOf="@id/tv_address"
+        android:text="-----" />
+
+
+    <TextView
+        android:id="@+id/tv_open_time"
+        style="@style/FontStyleGrayMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_address"
+        android:layout_marginTop="10dp"
+        android:text="开盘时间:" />
+
+    <TextView
+        android:id="@+id/tv_open_time_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_open_time"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/tv_open_time"
+        android:singleLine="true"
+        android:text="-----" />
+
+    <TextView
+        android:id="@+id/tv_complete_time"
+        style="@style/FontStyleGrayMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_open_time"
+        android:layout_marginTop="10dp"
+        android:text="交房时间:" />
+
+    <TextView
+        android:id="@+id/tv_complete_time_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_complete_time"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/tv_complete_time"
+        android:singleLine="true"
+        android:text="-----" />
+
+
+    <FrameLayout
+        android:id="@+id/fl_caculator"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/counter" />
+    </FrameLayout>
+
+</RelativeLayout>

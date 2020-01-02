@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="18dp">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:hintTextAppearance="@style/loginTextTip">
+
+        <com.easylife.house.customer.view.EditTextClearAble
+            android:id="@+id/edPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入手机号"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E9E9E9" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/layVerifyCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/loginTextTip">
+
+            <com.easylife.house.customer.view.EditTextClearAble
+                android:id="@+id/edVerifyCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:imeOptions="actionNext"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textSize="14sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/btnGetVerifyCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/layVerifyCode"
+            android:layout_alignParentRight="true"
+            android:enabled="false"
+            android:padding="10dp"
+            android:text="获取验证码"
+            android:textColor="@color/text_color_verifycode"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E9E9E9" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:hintTextAppearance="@style/loginTextTip">
+
+        <com.easylife.house.customer.view.EditTextClearAble
+            android:id="@+id/edPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请输入新密码"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E9E9E9" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:hintTextAppearance="@style/loginTextTip">
+
+        <com.easylife.house.customer.view.EditTextClearAble
+            android:id="@+id/edPassAgain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="请再次输入密码"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#E9E9E9" />
+
+
+    <com.easylife.house.customer.view.ButtonTouch
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pub_title_bar_height"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/login_selector"
+        android:enabled="false"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+</LinearLayout>

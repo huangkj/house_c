@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/export_shop">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@color/black"
+        android:alpha="0.2"/>
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="20dp"
+        android:layout_height="17dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/back_white"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        style="@style/FontStyleWhiteMiddle"
+        android:text="专家店铺"/>
+
+
+    <com.easylife.house.customer.view.photoview.RoundedImageView
+        android:id="@+id/iv_head"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/iv_back"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="27dp"
+        app:corner="90dp"
+        android:src="@mipmap/default_head"/>
+
+    <TextView
+        android:id="@+id/tv_base_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="---"
+        android:layout_marginTop="7dp"
+        style="@style/FontStyleWhiteSmall"
+        android:layout_below="@id/iv_head"
+        android:layout_marginLeft="32dp"/>
+
+    <RatingBar
+        android:id="@+id/shop_level"
+        android:layout_below="@id/tv_base_name"
+        android:layout_gravity="bottom"
+        android:progressTint="@color/gradient_end"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stepSize="0.1"
+        android:visibility="gone"
+        style="?android:attr/ratingBarStyleSmall"/>
+
+
+    <TextView
+        android:id="@+id/tv_good"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FontStyleWhiteSmaller"
+        android:layout_alignTop="@id/iv_head"
+        android:layout_toRightOf="@id/iv_head"
+        android:layout_marginLeft="35dp"
+        android:text="好评率"/>
+
+    <TextView
+        android:id="@+id/tv_good_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FontStyleWhiteSmaller"
+        android:layout_alignLeft="@id/tv_good"
+        android:layout_below="@id/tv_good"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:text="0%"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="0.5dp"
+        android:layout_height="10dp"
+        android:background="@color/white"
+        android:layout_toRightOf="@id/tv_good"
+        android:layout_alignTop="@id/tv_good"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="18dp"/>
+
+    <TextView
+        android:id="@+id/tv_integral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FontStyleWhiteSmaller"
+        android:layout_alignTop="@id/iv_head"
+        android:layout_toRightOf="@id/line"
+        android:text="积分"/>
+
+    <TextView
+        android:id="@+id/tv_integral_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FontStyleWhiteSmaller"
+        android:layout_alignLeft="@id/tv_integral"
+        android:layout_below="@id/tv_integral"
+        android:layout_marginTop="10dp"
+        android:text="0分"/>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="0.5dp"
+        android:layout_height="10dp"
+        android:background="@color/white"
+        android:layout_toRightOf="@id/tv_integral"
+        android:layout_alignTop="@id/tv_integral"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="18dp"/>
+
+    <TextView
+        android:id="@+id/tv_open_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FontStyleWhiteSmaller"
+        android:layout_alignTop="@id/iv_head"
+        android:layout_toRightOf="@id/line2"
+        android:text="开店时间"/>
+
+
+    <TextView
+        android:id="@+id/tv_open_time_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FontStyleWhiteSmaller"
+        android:layout_alignLeft="@id/tv_open_time"
+        android:layout_below="@id/tv_open_time"
+        android:layout_marginTop="10dp"
+        android:text="---"/>
+
+    <TextView
+        android:id="@+id/tv_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="给TA评价"
+        style="@style/FontStyleWhiteSmaller"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/shop_comment_bg"/>
+
+</RelativeLayout>

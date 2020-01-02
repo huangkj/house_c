@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f8">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_house"
+            android:layout_width="94dp"
+            android:layout_height="74dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            style="@style/FontStyleEndMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:text="---" />
+
+        <TextView
+            android:id="@+id/tv_house_name"
+            style="@style/FontStyleLightBlackMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toLeftOf="@id/tv_price"
+            android:layout_toRightOf="@id/iv_house"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="---" />
+
+
+        <TextView
+            android:id="@+id/tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_house_name"
+            android:layout_below="@id/tv_house_name"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:ellipsize="end"
+            android:text="---"
+            android:textColor="@color/_134134134" />
+
+        <TextView
+            android:id="@+id/tv_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_area"
+            android:layout_marginLeft="10dp"
+            android:lines="1"
+            android:ellipsize="end"
+            android:layout_toRightOf="@id/tv_area"
+            android:text="---"
+            android:textColor="@color/_134134134" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_area"
+            android:layout_below="@id/tv_area"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:ellipsize="end"
+            android:text="---"
+            android:textSize="@dimen/dp_10"
+            android:textColor="@color/_190189189" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/iv_house"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/gray_line" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/FontStyleLightBlackMiddle"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:text="姓名:" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_name"
+            android:layout_toRightOf="@id/tv_name"
+            android:background="@null"
+            android:hint="请输入您的姓名"
+            android:lines="1"
+            android:textColorHint="@color/_156156156"
+            android:textSize="16dp" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/tv_name"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/gray_line" />
+
+
+        <TextView
+            android:id="@+id/tv_phone"
+            style="@style/FontStyleLightBlackMiddle"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:text="手机号:" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_phone"
+            android:layout_toRightOf="@id/tv_phone"
+            android:background="@null"
+            android:hint="请输入您的手机号"
+            android:inputType="number"
+            android:lines="1"
+            android:maxLength="11"
+            android:textColorHint="@color/_156156156"
+            android:textSize="16dp" />
+
+        <View
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/tv_phone"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_sms"
+            android:layout_below="@id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_sms"
+                style="@style/FontStyleLightBlackMiddle"
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:text="验证码:" />
+
+
+            <EditText
+                android:id="@+id/et_sms"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_sms"
+                android:layout_toRightOf="@id/tv_sms"
+                android:background="@null"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:lines="1"
+                android:maxLength="11"
+                android:textColorHint="@color/_156156156"
+                android:textSize="16dp" />
+
+
+            <TextView
+                android:id="@+id/tv_get_sms"
+                android:layout_alignBottom="@id/et_sms"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gradient_end"
+                android:textSize="14sp"
+                android:text="获取验证码"/>
+
+            <View
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@id/tv_get_sms"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/gray_line" />
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/FontStyleLightBlackMiddle"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_sms"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dp"
+            android:text="看房时间:" />
+
+        <TextView
+            android:id="@+id/et_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_time"
+            android:layout_toRightOf="@id/tv_time"
+            android:hint="请选择看房时间"
+            android:textColorHint="@color/_156156156"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+
+    <CheckBox
+        android:id="@+id/cb_agreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_top"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:buttonTint="@color/gradient_end"
+        android:text="我已阅读并同意"
+        android:textColor="#868686" />
+
+    <TextView
+        android:id="@+id/tv_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/cb_agreen"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@id/cb_agreen"
+        android:text="《好生活新房委托服务协议》"
+        android:textColor="@color/gradient_end" />
+
+
+    <TextView
+        android:id="@+id/tv_ok"
+        style="@style/FontStyleWhiteMiddle"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/cb_agreen"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_bg_btn_gradient_raduis"
+        android:gravity="center"
+        android:text="确定" />
+
+
+</RelativeLayout>

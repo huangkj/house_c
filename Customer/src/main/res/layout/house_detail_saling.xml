@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+    
+    <ImageView
+        android:id="@+id/iv_saling"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:src="@mipmap/saling_detail"/>
+
+    <TextView
+        android:id="@+id/tv_saling_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        style="@style/FontStyleBlackSmall"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/iv_saling"
+        android:layout_alignTop="@id/iv_saling"/>
+
+    <TextView
+        android:id="@+id/tv_saling_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FontStyleBlackSmall"
+        android:layout_alignLeft="@id/tv_saling_title"
+        android:layout_below="@id/tv_saling_title"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_saling_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FontStyleGraySmaller"
+        android:layout_below="@id/tv_saling_title"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/tv_saling_price"/>
+
+    <TextView
+        android:id="@+id/tv_can_sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/FontStyleEndSmaller"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="3dp"
+        android:layout_below="@id/tv_saling_discount"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray_line"
+        android:layout_below="@id/tv_can_sale"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@id/tv_saling_price"/>
+
+
+
+</RelativeLayout>

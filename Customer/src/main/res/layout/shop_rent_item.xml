@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="20dp"
+    android:paddingTop="18dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:scaleType="fitXY"
+        app:riv_corner_radius="2dip"
+        app:riv_oval="false"
+        android:id="@+id/ivLogoShopRent"
+        android:layout_width="120dp"
+        android:layout_height="90dp"
+        android:background="@color/gray_f8" />
+
+
+    <TextView
+        android:id="@+id/tvTitleShopRent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/ivLogoShopRent"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="合生愉景湾临街700平米大面积出租愉景湾"
+        android:textColor="#ff0b212d"
+        android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/tvPriceShopRent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ivLogoShopRent"
+        android:layout_alignLeft="@+id/tvTitleShopRent"
+        android:layout_toRightOf="@+id/ivLogoShopRent"
+        android:text="140000元/月 "
+        android:textColor="#ffff6800"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/tvDescShopRent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvTitleShopRent"
+        android:layout_below="@+id/tvTitleShopRent"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="700㎡·合生愉景商铺"
+        android:textColor="#ff666565"
+        android:textSize="12sp" />
+
+    <View
+
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/tvPriceShopRent"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/_e7e7e7" />
+
+
+</RelativeLayout>

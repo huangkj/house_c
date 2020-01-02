@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.easylife.house.customer.ui.houses.housesdetail.HousesDetailFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+                <com.bigkoo.convenientbanner.ConvenientBanner
+                    android:id="@+id/convenientBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+                <TextView
+                    android:id="@+id/tvBannerCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="28dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/banner_count_bg"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="2dp"
+                    android:text="1/31"
+                    android:textColor="#ffffffff"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+
+            <include layout="@layout/house_detail_top" />
+
+            <TextView
+                android:id="@+id/btnSelectBuy"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/orange_rect_sold_bg2"
+                android:text="立即选房"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+
+
+            <!--   <include layout="@layout/include_line_hor_left_18" />-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#fff5f5f5" />
+
+            <!--置业优惠-->
+            <LinearLayout
+                android:id="@+id/layFavorable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="优惠信息"
+                    android:textColor="#ff484848"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!--废弃 start-->
+                <LinearLayout
+                    android:id="@+id/layDiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/shape_bg_orange_2"
+                        android:gravity="center"
+                        android:text="折"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tvDiscount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:text="全款95折 贷款97折"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycleFavorable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </FrameLayout>
+
+                <!--废弃 end-->
+                <!--   android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"   DiscountAdapter代码有用到-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rcvYouHuiXinXi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp" />
+
+
+                <RelativeLayout
+                    android:id="@+id/relYouHuiXinxiSinge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/youhuixinxi_singe_bg"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tvYouHuiTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="12dp"
+                        android:text="13万抵一口价"
+                        android:textColor="#ffff6800"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvYouHuiDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvYouHuiTitle"
+                        android:layout_alignLeft="@+id/tvYouHuiTitle"
+                        android:layout_marginTop="8dp"
+                        android:paddingBottom="10dp"
+                        android:text="适用于：五居室以上（13人已领取）"
+                        android:textColor="#ff727272"
+                        android:textSize="14sp" />
+
+
+                    <TextView
+                        android:id="@+id/tvGetNow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12dp"
+                        android:background="@drawable/youhui_get_now_bg"
+                        android:paddingLeft="12dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="5dp"
+                        android:text="立即领取"
+                        android:textColor="#ffffffff"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#fff5f5f5" />
+
+            </LinearLayout>
+
+
+            <!--废弃-->
+            <LinearLayout
+                android:id="@+id/llClub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="185dp"
+                    android:padding="@dimen/dp_10"
+                    android:visibility="gone" />
+
+                <!--      <com.easylife.house.customer.view.ButtonTouch
+                          android:id="@+id/btnSelectBuy"
+                          android:layout_width="match_parent"
+                          android:layout_height="50dp"
+                          android:layout_alignParentRight="true"
+                          android:layout_margin="@dimen/dp_10"
+                          android:background="@drawable/orange_rect_sold_bg2"
+                          android:text="立即选房"
+                          android:textColor="@color/white"
+                          android:visibility="visible" />-->
+
+            </LinearLayout>
+            <!--废弃-->
+
+
+            <!--在售房源-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_saling_more"
+                    style="@style/FontStyleBlackMiddle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="在售房源" />
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="9dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:src="@mipmap/more" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycleview_saling"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_saling_more" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rl_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:id="@+id/tv_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="主力户型"
+                    android:textColor="#ff484848"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_marginRight="20dp"
+                    android:layout_width="5dp"
+                    android:layout_height="9dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:src="@mipmap/more" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/recycleview_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_type"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp" />
+
+                <View
+                    android:layout_below="@+id/recycleview_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/gray_f8" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_dynamic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:id="@+id/tv_dynamic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="楼盘动态"
+                    android:textColor="#ff484848"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_dynamic_value"
+                    style="@style/FontStyleBlackMiddle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_dynamic" />
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="9dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:src="@mipmap/more" />
+            </RelativeLayout>
+
+
+            <include layout="@layout/houses_my_dynamic" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray_f8" />
+
+            <RelativeLayout
+                android:id="@+id/rl_houses_comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:id="@+id/tv_houses_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="楼盘评价"
+                    android:textColor="#ff484848"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_houses_comment_value"
+                    style="@style/FontStyleBlackMiddle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_houses_comment" />
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="9dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/more" />
+            </RelativeLayout>
+
+
+            <include layout="@layout/comment_star" />
+
+            <include layout="@layout/include_line_hor_left_18" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/comment_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp" />
+
+            <TextView
+                android:id="@+id/tv_comment_btn"
+                style="@style/FontStyleEndMiddle"
+                android:layout_marginTop="24dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="78dp"
+                android:layout_marginRight="78dp"
+                android:background="@drawable/want_comment_bg"
+                android:gravity="center"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:text="写评价" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/gray_f8" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_building"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_building"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="楼栋信息"
+                    android:textColor="#ff484848"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="9dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/more" />
+                <!--
+                                <ImageView
+                                    android:id="@+id/iv_building"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="220dp"
+                                    android:layout_below="@id/tv_building"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginLeft="@dimen/dp_20"
+                                    android:layout_marginRight="@dimen/dp_20"
+                                    android:background="@color/_e7e7e7"
+                                    android:scaleType="fitXY" />-->
+
+                <com.easylife.house.customer.view.ScrollWebView
+                    android:id="@+id/wv_building"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_below="@id/tv_building"
+                    android:layout_marginLeft="@dimen/dp_20"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:layout_marginBottom="10dp" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray_f8" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp">
+
+                <TextView
+                    android:id="@+id/tv_houses_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="位置及周边"
+                    android:textColor="#ff484848"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:layout_below="@id/tv_houses_map"
+                    android:layout_marginTop="10dp">
+
+
+                    <fragment
+                        android:id="@+id/mapView"
+                        class="com.amap.api.maps.TextureSupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+
+                    <View
+                        android:id="@+id/iv_map"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.easylife.house.customer.view.ButtonTouch
+                        android:id="@+id/btnNavigation"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/shape_bg_btn_white_90"
+                        android:drawableRight="@mipmap/map_navigation_balck"
+                        android:drawablePadding="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="10dp"
+                        android:text="导航"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_arround"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/lay"
+                    android:layout_centerVertical="true"
+                    android:drawableRight="@mipmap/more"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="地铁、公交、学校、医院、购物、银行..." />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray_f8" />
+
+            <RelativeLayout
+                android:id="@+id/rl_houses_team"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="@dimen/dp_10"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_houses_team"
+                    style="@style/FontStyleLightBlackMiddle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:text="专家团队" />
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="9dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:src="@mipmap/more" />
+
+                <View
+                    android:id="@+id/team_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@id/tv_houses_team"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray_f8" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/team_recycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/team_line" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/gray_f8" />
+
+            <RelativeLayout
+                android:id="@+id/rl_houses_like"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_houses_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="相似推荐"
+                    android:textColor="#ff484848"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <ImageView
+                    android:layout_marginRight="20dp"
+                    android:layout_width="5dp"
+                    android:layout_height="9dp"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone"
+                    android:src="@mipmap/more" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rcvLikeHouse22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_houses_like" />
+
+                <!--
+                                <LinearLayout
+                                    android:id="@+id/ll_like"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:layout_below="@id/tv_houses_like"
+                                    android:layout_marginTop="15dp"
+                                    android:orientation="horizontal">
+
+                                    <RelativeLayout
+                                        android:id="@+id/ll_like1"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="3dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv_like1"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="110dp"
+                                            android:background="@color/gray_line"
+                                            android:scaleType="centerCrop" />
+
+                                        <TextView
+                                            android:id="@+id/tv_like1"
+                                            style="@style/FontStyleEndSmall"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/iv_like1"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="center_vertical|left"
+                                            android:text="&#45;&#45;&#45;&#45;&#45;&#45;" />
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="110dp"
+                                            android:alpha="0.4"
+                                            android:background="@color/black" />
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="110dp">
+
+                                            <View
+                                                android:id="@+id/tv1"
+                                                android:layout_width="1dp"
+                                                android:layout_height="1dp"
+                                                android:layout_centerInParent="true" />
+
+                                            <TextView
+                                                android:id="@+id/tvName1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_above="@id/tv1"
+                                                android:layout_centerHorizontal="true"
+                                                android:layout_marginBottom="2dp"
+                                                android:ellipsize="end"
+                                                android:gravity="center"
+                                                android:lines="1"
+                                                android:textColor="@color/white"
+                                                android:textSize="16sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@id/tv1"
+                                                android:layout_centerHorizontal="true"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginRight="10dp"
+                                                android:layout_marginTop="2dp"
+                                                android:gravity="center_horizontal"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:id="@+id/tv_like_area1"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:ellipsize="end"
+                                                    android:maxLines="1"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="12sp" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_like_room1"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="@dimen/dp_5"
+                                                    android:ellipsize="end"
+                                                    android:maxLines="1"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="12sp" />
+                                            </LinearLayout>
+
+                                        </RelativeLayout>
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/ll_like2"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="3dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <ImageView
+                                            android:id="@+id/iv_like2"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="110dp"
+                                            android:background="@color/gray_line"
+                                            android:scaleType="centerCrop" />
+
+                                        <TextView
+                                            android:id="@+id/tv_like2"
+                                            style="@style/FontStyleEndSmall"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/iv_like2"
+                                            android:layout_marginTop="10dp"
+                                            android:gravity="center_vertical|left"
+                                            android:text="-&#45;&#45;&#45;&#45;" />
+
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="110dp"
+                                            android:alpha="0.4"
+                                            android:background="@color/black" />
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="110dp">
+
+                                            <View
+                                                android:id="@+id/tv2"
+                                                android:layout_width="1dp"
+                                                android:layout_height="1dp"
+                                                android:layout_centerInParent="true" />
+
+                                            <TextView
+                                                android:id="@+id/tvName2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_above="@id/tv2"
+                                                android:layout_centerHorizontal="true"
+                                                android:layout_marginBottom="2dp"
+                                                android:ellipsize="end"
+                                                android:gravity="center"
+                                                android:lines="1"
+                                                android:textColor="@color/white"
+                                                android:textSize="16sp" />
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_below="@id/tv2"
+                                                android:layout_centerHorizontal="true"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginRight="10dp"
+                                                android:layout_marginTop="2dp"
+                                                android:gravity="center_horizontal"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:id="@+id/tv_like_area2"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:ellipsize="end"
+                                                    android:maxLines="1"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="12sp" />
+
+                                                <TextView
+                                                    android:id="@+id/tv_like_room2"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="@dimen/dp_5"
+                                                    android:ellipsize="end"
+                                                    android:maxLines="1"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="12sp" />
+                                            </LinearLayout>
+
+                                        </RelativeLayout>
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>-->
+            </RelativeLayout>
+            <!--
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bg_default_gray"
+                            android:padding="@dimen/dp_15"
+                            android:text="！信息仅供参考，购买时请以开发商价格为准，请谨慎核查。"
+                            android:textSize="12sp" />-->
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

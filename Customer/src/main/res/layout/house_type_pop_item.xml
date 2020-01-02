@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/house_type_selector"
+    android:paddingBottom="6dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp"
+    android:paddingTop="6dp"
+    android:textSize="12sp"
+    android:textColor="@color/text_orange_or_gray_house_type">
+
+</TextView>

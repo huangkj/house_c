@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+    android:background="@color/white"
+    android:elevation="2dp"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/rl_collect2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <CheckBox
+                android:id="@+id/iv_collect2"
+                android:layout_width="16dp"
+                android:layout_height="14dp"
+                android:background="@drawable/detail_collect_check"
+                android:button="@null"
+                android:clickable="false" />
+
+            <TextView
+                style="@style/FontStyleGraySmaller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:clickable="false"
+                android:text="收藏"
+                android:textColor="#ff868686"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!--
+                <LinearLayout
+                    android:id="@+id/rl_sub2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@mipmap/house_sub2" />
+
+                    <TextView
+                        style="@style/FontStyleGraySmaller"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:clickable="false"
+                        android:text="订阅"
+                        android:textColor="#ff868686"
+                        android:textSize="10sp" />
+
+
+                </LinearLayout>-->
+
+        <View
+            android:layout_width="15dp"
+            android:layout_height="1dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_call2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="13dp"
+            android:layout_weight="1"
+            android:background="@drawable/yuyue_kanfang_bg2"
+            android:gravity="center"
+            android:text="电话咨询"
+            android:textColor="#ffffffff"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

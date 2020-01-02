@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layoutBtns"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#00000000"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/GrayLighter"
+            android:orientation="vertical">
+
+            <include layout="@layout/include_line_hor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_pub_bg_white"
+                android:clickable="true"
+                android:gravity="center"
+                android:minHeight="45dp"
+                android:padding="10dp"
+                android:text="上传照片"
+                android:textColor="@color/GrayLight" />
+
+            <include layout="@layout/include_line_hor" />
+
+            <TextView
+                android:id="@+id/tvCamera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_pub_bg_white"
+                android:clickable="true"
+                android:gravity="center"
+                android:minHeight="45dp"
+                android:padding="10dp"
+                android:text="拍照"
+                android:textColor="@color/text_normal" />
+
+            <include layout="@layout/include_line_hor" />
+
+            <TextView
+                android:id="@+id/tvPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_pub_bg_white"
+                android:clickable="true"
+                android:gravity="center"
+                android:minHeight="45dp"
+                android:padding="10dp"
+                android:text="相册"
+                android:textColor="@color/text_normal" />
+
+            <include layout="@layout/include_line_hor" />
+
+            <TextView
+                android:id="@+id/tvSystemPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_pub_bg_white"
+                android:clickable="true"
+                android:gravity="center"
+                android:minHeight="45dp"
+                android:padding="10dp"
+                android:text="系统图库"
+                android:textColor="#037AFF"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_pub_bg_white"
+                android:clickable="true"
+                android:gravity="center"
+                android:minHeight="45dp"
+                android:padding="10dp"
+                android:text="取消"
+                android:textColor="@color/text_normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

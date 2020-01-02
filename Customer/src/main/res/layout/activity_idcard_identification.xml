@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.mine.card.IDCardIdentificationActivity">
+
+
+    <TextView
+        android:id="@+id/tvTextIdCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="请上传身份证正反面照"
+        android:textColor="@color/_535353"
+        android:textSize="15sp" />
+
+
+    <LinearLayout
+        android:id="@+id/llImageIdCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTextIdCard"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal"
+        android:paddingBottom="40dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivIdCardFront"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:background="@mipmap/iv_add_image"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="正面"
+                android:textColor="@color/_535353"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivIdCardBack"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:background="@mipmap/iv_add_image"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="反面"
+                android:textColor="@color/_535353"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llImageIdCard"
+        android:background="@color/_f8f8f8"
+        android:paddingLeft="19dp"
+        android:paddingRight="19dp">
+
+
+        <TextView
+            android:id="@+id/tvText2IdCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:text="*请保证输入的信息真实有效"
+            android:textColor="#ff535353"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/cbAgreeIdCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvText2IdCard"
+            android:layout_marginTop="14dp"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_id_crad"
+            android:drawablePadding="7dp"
+            android:text="同意"
+            android:textColor="#9a9a9a" />
+
+        <TextView
+            android:id="@+id/tvUserBookIdCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/cbAgreeIdCard"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/cbAgreeIdCard"
+            android:text="《好生活用户协议》"
+            android:textColor="#FF6800"
+            android:textSize="15sp" />
+
+
+        <com.easylife.house.customer.view.ButtonTouch
+            android:id="@+id/btnNextIdCard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pub_title_bar_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/shape_bg_btn_gradient"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_pub_bg_white"
+                android:gravity="left|center_vertical"
+                android:padding="18dp"
+                android:text="消息通知"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/cbPush"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dp"
+                android:button="@drawable/cb_selecte" />
+        </RelativeLayout>
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <TextView
+            android:id="@+id/btnClearCache"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:drawableRight="@mipmap/more"
+            android:gravity="left|center_vertical"
+            android:padding="18dp"
+            android:text="清除缓存"
+            android:textSize="16sp" />
+
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <TextView
+            android:id="@+id/btnAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:drawableRight="@mipmap/more"
+            android:gravity="left|center_vertical"
+            android:padding="18dp"
+            android:text="关于好生活"
+            android:textSize="16sp" />
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <TextView
+            android:id="@+id/btnScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:drawableRight="@mipmap/more"
+            android:gravity="left|center_vertical"
+            android:padding="18dp"
+            android:text="好生活评分"
+            android:textSize="16sp" />
+
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+
+        <TextView
+            android:id="@+id/btnHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:drawableRight="@mipmap/more"
+            android:gravity="left|center_vertical"
+            android:padding="18dp"
+            android:text="帮助与反馈"
+            android:textSize="16sp" />
+
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <LinearLayout
+            android:id="@+id/layUpdatePassWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/btnUpdatePassWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_pub_bg_white"
+                android:drawableRight="@mipmap/more"
+                android:gravity="left|center_vertical"
+                android:padding="18dp"
+                android:text="修改密码"
+                android:textSize="16sp" />
+
+
+            <include layout="@layout/include_line_hor_left_18" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnStatement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:drawableRight="@mipmap/more"
+            android:gravity="left|center_vertical"
+            android:padding="18dp"
+            android:text="免责声明"
+            android:textSize="16sp" />
+
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/btnVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_pub_bg_white"
+                android:gravity="left|center_vertical"
+                android:padding="18dp"
+                android:text="版本信息"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawableRight="@mipmap/more"
+                android:drawablePadding="5dp"
+                android:gravity="left|center_vertical"
+                android:padding="18dp"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

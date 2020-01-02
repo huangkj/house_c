@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/cbSelectBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:drawableLeft="@drawable/cb_select_bank" />
+
+    <LinearLayout
+        android:id="@+id/layCardInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@+id/cbSelectBank"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvBankName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#ff535353"
+            android:textSize="15sp"
+            tools:text="中国银行" />
+
+
+        <TextView
+            android:id="@+id/tvBankCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#ff535353"
+            android:textSize="15sp"
+            tools:text="尾号0202储蓄卡" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="22dp"
+        android:layout_toRightOf="@id/layCardInfo"
+        android:drawableLeft="@mipmap/icon_tip_bank_card"
+        android:drawablePadding="5dp"
+        android:text="信息不全"
+        android:textColor="@color/gradient_end"
+        android:textSize="13sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvComplete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:drawableRight="@mipmap/more"
+        android:drawablePadding="3dp"
+        android:text="补充"
+        android:textColor="#cc535353"
+        android:textSize="15sp"
+        android:visibility="gone" />
+
+
+    <include
+        android:id="@+id/line_h"
+        layout="@layout/cut_line_h"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layCardInfo"
+        android:layout_marginTop="15dp" />
+
+</RelativeLayout>

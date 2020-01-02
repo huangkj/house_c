@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="20dp">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:text="支付确认"
+        android:textColor="#ff595c59"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvName"
+        android:layout_alignParentRight="true"
+        android:text="审核通过"
+        android:textColor="#7C7C7C"
+        android:textSize="13sp" />
+
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_marginTop="6dp"
+        android:paddingBottom="6dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2019-12-11 12:45"
+        android:textColor="#99535353"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvReason"
+        android:paddingBottom="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="查看审批意见"
+        android:textColor="#ff228aec"
+        android:drawablePadding="4dp"
+        android:drawableRight="@mipmap/icon_arrow_blue"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/tvReason"
+        android:background="@color/transparent" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_shape"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/v1"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="17dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/vTop"
+            android:layout_width="1dp"
+            android:layout_height="2dp"
+            android:visibility="invisible"
+            android:background="#30535353" />
+
+
+        <ImageView
+            android:id="@+id/iv_shape"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/follow_progress_shape2" />
+
+
+        <View
+            android:layout_marginTop="2dp"
+            android:id="@+id/vBottom"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#30535353" />
+    </LinearLayout>
+
+</RelativeLayout>

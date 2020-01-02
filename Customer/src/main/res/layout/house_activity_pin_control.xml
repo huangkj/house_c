@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvHouseStatusDesc"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:background="#FEAA78"
+        android:drawablePadding="10dp"
+        android:drawableRight="@mipmap/close_x"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:text="楼盘房源概述:  在售:24套  已售:8套  待售:21套"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:id="@+id/btnHouseType"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:button="@null"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/cb_arrow_more_house"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="户型"
+                android:textColor="@color/text_orange_or_black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:id="@+id/btnHouseBuild"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:button="@null"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/cb_arrow_more_house"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="楼栋"
+                android:textColor="@color/text_orange_or_black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/include_line_hor" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_house_available"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="在售"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_house_sold"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30dp"
+                    android:text="已售完"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_house_selected"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30dp"
+                    android:text="选中"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/icon_house_checked"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30dp"
+                    android:text="筛选"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <include layout="@layout/include_line_hor" />
+
+            <com.easylife.house.customer.view.HousePinControlView
+                android:id="@+id/vHousePinControl"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1" />
+
+            <include layout="@layout/include_line_hor" />
+
+
+            <LinearLayout
+                android:id="@+id/layHouseDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="7dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/shape_line_dash"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+
+                        <TextView
+                            android:id="@+id/tvBuildNumber"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@mipmap/icon_pincontro_house"
+                            android:drawablePadding="10dp"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:paddingRight="10dp"
+                            android:singleLine="true"
+                            android:textSize="14sp" />
+
+
+                        <TextView
+                            android:id="@+id/tvHouseStructure"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@mipmap/icon_pincontro_stru"
+                            android:drawablePadding="10dp"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:paddingRight="10dp"
+                            android:singleLine="true"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp">
+
+
+                        <TextView
+                            android:id="@+id/tvHouseArea"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@mipmap/icon_pincontro_area"
+                            android:drawablePadding="10dp"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:paddingRight="10dp"
+                            android:singleLine="true"
+                            android:textSize="14sp" />
+
+
+                        <TextView
+                            android:id="@+id/tvHousePrice"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@mipmap/icon_pincontro_price"
+                            android:drawablePadding="10dp"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:paddingRight="10dp"
+                            android:singleLine="true"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.easylife.house.customer.view.ButtonTouch
+                    android:id="@+id/btnDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="48sp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/shape_bg_bottom_pincontro"
+                    android:text="查看房源详情"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layFloat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/listFilter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:id="@+id/layEmpty"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#66666666" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

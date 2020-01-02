@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relTitleContainer"
+    android:layout_width="137dp"
+    android:layout_height="104dp"
+    android:background="#F8F8F8">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/title_content_bg"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvTitleDevName"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="珠江丽景家园"
+            android:textColor="#ff484848"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvTitleDevSquareMetre"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="建面 110-180㎡"
+            android:textColor="#ff8b8b8b"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tvTitlePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="48000元/㎡ "
+            android:textColor="#ffff6800"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:padding="5dp"
+        android:id="@+id/ivDel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp"
+        android:src="@mipmap/iv_title_close" />
+
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="18dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp">
+
+        <TextView
+            android:id="@+id/tv_comment_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="---"
+            android:textColor="@color/_899289"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_comment_content"
+            android:layout_below="@id/tv_comment_name"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/_899289"
+            android:textSize="12sp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_reply"
+            android:layout_below="@id/tv_comment_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/_238238238"
+            android:textColor="@color/_154154154"
+            android:padding="@dimen/dp_5"
+            android:textSize="12sp"
+            android:layout_marginRight="@dimen/dp_10"
+            android:visibility="gone"
+            android:text="经济人回复:亲，谢谢您的评价，祝您生活愉快。"/>
+
+        <TextView
+            android:id="@+id/tv_comment_time"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="---"
+            android:textColor="@color/_154154154"
+            android:textSize="10dp"/>
+
+        <RatingBar
+            android:id="@+id/export_content_star"
+            android:layout_toRightOf="@id/tv_comment_name"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:stepSize="0.1"
+            style="?android:attr/ratingBarStyleSmall"
+            android:progressTint="@color/gradient_end"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_f8"/>
+
+</LinearLayout>

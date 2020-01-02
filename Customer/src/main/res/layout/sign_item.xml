@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="69dp"
+    android:layout_marginBottom="0.5dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/iv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_15"
+        android:src="@mipmap/icon_jifen" />
+
+    <TextView
+        android:id="@+id/tv_integrail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_17"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/iv_money"
+        android:text="获取10积分"
+        android:textColor="#ff535353"
+        android:textSize="15sp" />
+
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_integrail"
+        android:layout_below="@id/tv_integrail"
+        android:layout_marginTop="@dimen/dp_8"
+        android:textColor="#ffa5a5a5"
+        android:textSize="12sp" />
+
+</RelativeLayout>

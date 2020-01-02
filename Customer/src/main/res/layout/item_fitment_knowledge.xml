@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layContent"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/bg_shadow_gray"
+    android:paddingLeft="20dp"
+    android:paddingTop="16dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/tvReadTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="推荐阅读标题推荐阅读标题推荐阅读标题推荐阅读标题"
+        android:textColor="@color/gray_title"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvReadTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvReadTitle"
+        android:layout_marginBottom="6dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="知识标签"
+        android:textColor="@color/fitment_orange"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/imgReadImage"
+        android:layout_width="100dp"
+        android:layout_height="67dp"
+        android:layout_below="@id/tvReadTag"
+        android:layout_marginRight="10dp"
+        android:src="@color/gradient_end" />
+
+    <TextView
+        android:id="@+id/tvReadContent"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_below="@id/tvReadTag"
+        android:layout_toRightOf="@id/imgReadImage"
+        android:ellipsize="end"
+        android:text="推荐阅读内容推荐阅读内容推荐阅读内容推荐阅读内容"
+        android:textColor="@color/gray_content"
+        android:textSize="12sp" />
+</RelativeLayout>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layUserHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/selector_pub_bg_white"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="18dp"
+                android:drawableRight="@mipmap/more"
+                android:text="我的头像"
+                android:textColor="@color/text_normal"
+                android:textSize="16sp" />
+
+            <com.easylife.house.customer.view.photoview.RoundedImageView
+                android:id="@+id/imgUserHeader"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerCrop"
+                android:src="@color/bg_main_gray"
+                app:corner="90dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layUserNike"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="18dp"
+                android:drawableRight="@mipmap/more"
+                android:text="我的用户名"
+                android:textColor="@color/text_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvUserNike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="35dp"
+                android:hint="未填写"
+                android:textColor="@color/text_normal"
+                android:textColorHint="@color/text_hint" />
+        </RelativeLayout>
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <RelativeLayout
+            android:id="@+id/layUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="18dp"
+                android:drawableRight="@mipmap/more"
+                android:text="姓名"
+                android:textColor="@color/text_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="35dp"
+                android:gravity="right"
+                android:hint="未填写"
+                android:textColor="@color/text_normal"
+                android:textColorHint="@color/text_hint" />
+        </RelativeLayout>
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <RelativeLayout
+            android:id="@+id/layUserPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="18dp"
+                android:text="手机号"
+                android:textColor="@color/text_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvUserPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="35dp"
+                android:gravity="right"
+                android:hint="未填写"
+                android:textColor="@color/text_normal"
+                android:textColorHint="@color/text_hint" />
+        </RelativeLayout>
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <RelativeLayout
+            android:id="@+id/layUserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="18dp"
+                android:drawableRight="@mipmap/more"
+                android:text="邮箱"
+                android:textColor="@color/text_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvUserEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="35dp"
+                android:gravity="right"
+                android:hint="未填写"
+                android:textColor="@color/text_normal"
+                android:textColorHint="@color/text_hint" />
+        </RelativeLayout>
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <RelativeLayout
+            android:id="@+id/layUserSex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="18dp"
+                android:drawableRight="@mipmap/more"
+                android:text="性别"
+                android:textColor="@color/text_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvSex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="35dp"
+                android:gravity="right"
+                android:hint="未填写"
+                android:textColor="@color/text_normal"
+                android:textColorHint="@color/text_hint" />
+        </RelativeLayout>
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <RelativeLayout
+            android:id="@+id/layUserBirthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="18dp"
+                android:drawableRight="@mipmap/more"
+                android:text="出生日期"
+                android:textColor="@color/text_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvUserBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="35dp"
+                android:gravity="right"
+                android:hint="未填写"
+                android:textColor="@color/text_normal"
+                android:textColorHint="@color/text_hint" />
+        </RelativeLayout>
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <RelativeLayout
+            android:id="@+id/layUserJob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="18dp"
+                android:drawableRight="@mipmap/more"
+                android:text="职业"
+                android:textColor="@color/text_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvUserJob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="35dp"
+                android:gravity="right"
+                android:hint="未填写"
+                android:textColor="@color/text_normal"
+                android:textColorHint="@color/text_hint" />
+        </RelativeLayout>
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <RelativeLayout
+            android:id="@+id/layUserHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_pub_bg_white"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="18dp"
+                android:drawableRight="@mipmap/more"
+                android:text="家庭情况"
+                android:textColor="@color/text_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvUserHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="35dp"
+                android:gravity="right"
+                android:hint="未填写"
+                android:textColor="@color/text_normal"
+                android:textColorHint="@color/text_hint" />
+        </RelativeLayout>
+
+        <include layout="@layout/include_line_hor_left_18" />
+
+        <RelativeLayout
+            android:id="@+id/layUserAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/selector_pub_bg_white"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="18dp"
+                android:drawableRight="@mipmap/more"
+                android:text="居住地"
+                android:textColor="@color/text_normal"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvUserAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="35dp"
+                android:gravity="right"
+                android:hint="未填写"
+                android:textColor="@color/text_normal"
+                android:textColorHint="@color/text_hint" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:text="*首次完善一项个人资料即可获得10积分奖励"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

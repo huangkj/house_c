@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_pager_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:src="@mipmap/back_black"/>
+
+        <TextView
+            android:id="@+id/tv_current"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="10"
+            android:gravity="center"
+            style="@style/FontStyleBlackMiddle"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_toRightOf="@id/tv_current"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            style="@style/FontStyleBlackMiddle"
+            android:text="/102"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_below="@id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"/>
+
+</RelativeLayout>

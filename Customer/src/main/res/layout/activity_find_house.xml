@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.houses.findhouse.FindHouseActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="42dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="#ff444345"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/3"
+                android:textColor="#B4B4B5"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="您的购房预算是多少？"
+                android:textColor="#ff444345"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+        <com.kyle.radiogrouplib.NestedRadioGroup
+            android:id="@+id/rpHousePrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+
+
+                <com.kyle.radiogrouplib.NestedRadioLayout
+                    android:id="@+id/rb100below"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/house_price_selector">
+
+                    <TextView
+                        android:id="@+id/tv100below"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="100万以下"
+                        android:textColor="@color/text_orange_or_gray_house_type2"
+                        android:textSize="14sp">
+
+                    </TextView>
+                </com.kyle.radiogrouplib.NestedRadioLayout>
+
+                <View
+                    android:layout_width="39dp"
+                    android:layout_height="1dp" />
+
+                <com.kyle.radiogrouplib.NestedRadioLayout
+                    android:id="@+id/rb100T150"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/house_price_selector">
+
+                    <TextView
+                        android:id="@+id/tv100T150"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="100万-150万"
+                        android:textColor="@color/text_orange_or_gray_house_type2"
+                        android:textSize="14sp">
+
+                    </TextView>
+                </com.kyle.radiogrouplib.NestedRadioLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+
+
+                <com.kyle.radiogrouplib.NestedRadioLayout
+                    android:id="@+id/rb150T200"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/house_price_selector">
+
+                    <TextView
+                        android:id="@+id/tv150T200"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="150万-200万"
+                        android:textColor="@color/text_orange_or_gray_house_type2"
+                        android:textSize="14sp">
+
+                    </TextView>
+                </com.kyle.radiogrouplib.NestedRadioLayout>
+
+                <View
+                    android:layout_width="39dp"
+                    android:layout_height="1dp" />
+
+                <com.kyle.radiogrouplib.NestedRadioLayout
+                    android:id="@+id/rb200T300"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/house_price_selector">
+
+                    <TextView
+                        android:id="@+id/tv200T300"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="200万-300万"
+                        android:textColor="@color/text_orange_or_gray_house_type2"
+                        android:textSize="14sp">
+
+                    </TextView>
+                </com.kyle.radiogrouplib.NestedRadioLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+
+
+                <com.kyle.radiogrouplib.NestedRadioLayout
+                    android:id="@+id/rb300T500"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/house_price_selector">
+
+                    <TextView
+                        android:id="@+id/tv300T500"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="300万-500万"
+                        android:textColor="@color/text_orange_or_gray_house_type2"
+                        android:textSize="14sp">
+
+                    </TextView>
+                </com.kyle.radiogrouplib.NestedRadioLayout>
+
+                <View
+                    android:layout_width="39dp"
+                    android:layout_height="1dp" />
+
+                <com.kyle.radiogrouplib.NestedRadioLayout
+                    android:id="@+id/rb500T1000"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/house_price_selector">
+
+                    <TextView
+                        android:id="@+id/tv500T1000"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="500万-1000万"
+                        android:textColor="@color/text_orange_or_gray_house_type2"
+                        android:textSize="14sp">
+
+                    </TextView>
+                </com.kyle.radiogrouplib.NestedRadioLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+
+
+                <com.kyle.radiogrouplib.NestedRadioLayout
+                    android:id="@+id/rb1000up"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/house_price_selector">
+
+                    <TextView
+                        android:id="@+id/tv1000up"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="1000万以上"
+                        android:textColor="@color/text_orange_or_gray_house_type2"
+                        android:textSize="14sp">
+
+                    </TextView>
+                </com.kyle.radiogrouplib.NestedRadioLayout>
+
+                <View
+                    android:layout_width="39dp"
+                    android:layout_height="1dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+
+        </com.kyle.radiogrouplib.NestedRadioGroup>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="34dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textColor="#ff444345"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/3"
+                android:textColor="#B4B4B5"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="您的户型要求？"
+                android:textColor="#ff444345"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <com.kyle.radiogrouplib.NestedRadioGroup
+            android:id="@+id/rpRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+
+                <com.kyle.radiogrouplib.NestedRadioLayout
+                    android:id="@+id/rb1Room"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/house_price_selector">
+
+                    <TextView
+                        android:id="@+id/tv1Room"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="一室"
+                        android:textColor="@color/text_orange_or_gray_house_type2"
+                        android:textSize="14sp">
+
+                    </TextView>
+                </com.kyle.radiogrouplib.NestedRadioLayout>
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="1dp" />
+
+                <com.kyle.radiogrouplib.NestedRadioLayout
+                    android:id="@+id/rb2Room"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/house_price_selector">
+
+                    <TextView
+                        android:id="@+id/tv2Room"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="二室"
+                        android:textColor="@color/text_orange_or_gray_house_type2"
+                        android:textSize="14sp">
+
+                    </TextView>
+                </com.kyle.radiogrouplib.NestedRadioLayout>
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="1dp" />
+
+                <com.kyle.radiogrouplib.NestedRadioLayout
+                    android:id="@+id/rb3Room"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/house_price_selector">
+
+                    <TextView
+                        android:id="@+id/tv3Room"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="三室"
+                        android:textColor="@color/text_orange_or_gray_house_type2"
+                        android:textSize="14sp">
+
+                    </TextView>
+                </com.kyle.radiogrouplib.NestedRadioLayout>
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="1dp" />
+
+                <com.kyle.radiogrouplib.NestedRadioLayout
+                    android:id="@+id/rb4Room"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/house_price_selector">
+
+                    <TextView
+                        android:id="@+id/tv4Room"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="四室"
+                        android:textColor="@color/text_orange_or_gray_house_type2"
+                        android:textSize="14sp">
+
+                    </TextView>
+                </com.kyle.radiogrouplib.NestedRadioLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="24dp"
+                android:orientation="horizontal">
+
+                <com.kyle.radiogrouplib.NestedRadioLayout
+                    android:id="@+id/rb5Room"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/house_price_selector">
+
+                    <TextView
+                        android:id="@+id/tv5Room"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="五室"
+                        android:textColor="@color/text_orange_or_gray_house_type2"
+                        android:textSize="14sp">
+
+                    </TextView>
+                </com.kyle.radiogrouplib.NestedRadioLayout>
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="1dp" />
+
+                <com.kyle.radiogrouplib.NestedRadioLayout
+                    android:id="@+id/rb5RoomUp"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/house_price_selector">
+
+                    <TextView
+                        android:id="@+id/tv5RoomUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="五室以上"
+                        android:textColor="@color/text_orange_or_gray_house_type2"
+                        android:textSize="14sp">
+
+                    </TextView>
+                </com.kyle.radiogrouplib.NestedRadioLayout>
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="1dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="1dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1" />
+
+
+            </LinearLayout>
+        </com.kyle.radiogrouplib.NestedRadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="34dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="#ff444345"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/3"
+                android:textColor="#B4B4B5"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="您的购房城市是哪里？"
+                android:textColor="#ff444345"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relSelectCity"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginRight="24dp"
+            android:background="#F8F8F8">
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:src="@mipmap/iv_find_house_location" />
+
+            <TextView
+                android:id="@+id/tvCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/iv1"
+                android:text="北京市"
+                android:textColor="#ff444345"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:src="@mipmap/iv_find_house_san" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pub_title_bar_height"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/shape_quick_login_bg_btn_gradient"
+            android:gravity="center"
+            android:text="立即找房"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvHouseLoan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@mipmap/more"
+        android:padding="18dp"
+        android:text="房贷计算器"
+        android:textColor="@color/text_normal"
+        android:textSize="16sp" />
+
+    <include layout="@layout/include_line_hor_left_18" />
+
+    <TextView
+        android:id="@+id/tvTaxes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@mipmap/more"
+        android:padding="18dp"
+        android:text="税费计算器"
+        android:textColor="@color/text_normal"
+        android:textSize="16sp" />
+
+    <include layout="@layout/include_line_hor_left_18" />
+
+    <TextView
+        android:id="@+id/tvEvaluate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@mipmap/more"
+        android:padding="18dp"
+        android:text="我要估价"
+        android:textColor="@color/text_normal"
+        android:textSize="16sp" />
+
+    <include layout="@layout/include_line_hor_left_18" />
+</LinearLayout>
